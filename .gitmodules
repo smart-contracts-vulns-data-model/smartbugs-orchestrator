@@ -1,0 +1,6 @@
+[submodule "smartbugs"]
+	path = smartbugs
+	url = git@github.com:smart-contracts-vulns-data-model/smartbugs.git
+[submodule "smart-vulnerabilities"]
+	path = smart-vulnerabilities
+	url = git@github.com:smart-contracts-vulns-data-model/smart-vulnerabilities.git
