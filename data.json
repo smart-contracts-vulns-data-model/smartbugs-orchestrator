@@ -232,7 +232,8 @@
             "ethor",
             "conkas",
             "confuzzius",
-            "semgrep"
+            "semgrep",
+            "slither"
           ],
           "mitigations": [],
           "parent_vulnerabilities": [
@@ -240,7 +241,7 @@
           ],
           "enabling_vulnerabilities": [],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-d9ecaa37-3017-4619-80bf-324afc7d1438"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-b19d6805-3e26-4a93-8237-23fd200ec483"
         }
       ]
     },
@@ -386,7 +387,7 @@
           "parent_vulnerabilities": [],
           "enabling_vulnerabilities": [],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-e643822f-e47e-48f6-9156-e492efcc7048"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-094f03c7-3e04-4cb8-bf54-beb4da11dc60"
         }
       ]
     },
@@ -532,7 +533,7 @@
           "parent_vulnerabilities": [],
           "enabling_vulnerabilities": [],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-e643822f-e47e-48f6-9156-e492efcc7048"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-094f03c7-3e04-4cb8-bf54-beb4da11dc60"
         }
       ]
     },
@@ -678,7 +679,7 @@
           "parent_vulnerabilities": [],
           "enabling_vulnerabilities": [],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-e643822f-e47e-48f6-9156-e492efcc7048"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-094f03c7-3e04-4cb8-bf54-beb4da11dc60"
         }
       ]
     },
@@ -757,7 +758,7 @@
           "parent_vulnerabilities": [],
           "enabling_vulnerabilities": [],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-2d7268b6-24d0-4c98-9613-39ace98f4c41"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-973359f1-6956-474e-8c0e-f57c8abca1d6"
         }
       ]
     },
@@ -951,1175 +952,12 @@
           ],
           "enabling_vulnerabilities": [],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-e9f98d44-96eb-4e70-8ae8-8f3af44f6f3f"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-6e4346b6-ee6a-4c6f-b521-7eda9d6d5c24"
         }
       ]
     }
   ],
   "securify": [],
-  "sfuzz": [
-    {
-      "locations": [
-        {
-          "message": {
-            "text": "contract SimpleDAO.sol, function donate"
-          },
-          "physicalLocation": {
-            "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.sol"
-            }
-          }
-        }
-      ],
-      "message": {
-        "text": "Reentrancy"
-      },
-      "ruleId": "sfuzz_Reentrancy",
-      "sbo": [
-        {
-          "name": "Reentrancy",
-          "description": "- A single function reentrancy attack occurs when a vulnerable function is the same  function that an attacker is trying to recursively call -an external call within the function triggers the function again, initiating the  half-completed execution multiple times, leading to a cascade of state changes. not reentrant functions which can misbehave if re-entered (called back ) before their termination (using the fallback function) causing i.e. loops  until out-of gas or stack-size reached. It follows from incorrect management of the  global state of an externally invokable function, which manages to re-enter the  caller function in an inconsistent state",
-          "sample_code": "",
-          "level": "Solidity Language",
-          "categories": [
-            "Reentrancy-related"
-          ],
-          "attacks": [
-            "DAO"
-          ],
-          "references": [
-            {
-              "ref_id": "Atzei 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Rameder 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Vidal 2023 - OpenSCV",
-              "alias": "Unsafe Credit Transfer"
-            },
-            {
-              "ref_id": "SWC",
-              "alias": "SWC-107: Reentrancy"
-            },
-            {
-              "ref_id": "Tikhomirov 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Kalra 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Grishchenko 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Zhou 2022",
-              "alias": "Re-entrancy"
-            },
-            {
-              "ref_id": "Praitheeshan 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Di Angelo 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Sayeed 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Durieux 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Luu 2016",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Dika 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Alharby 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Zhang 2023",
-              "alias": "Reentrancy - RE"
-            },
-            {
-              "ref_id": "Qian 2022",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chu 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chaliasos 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Almakhour 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2022",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2022 DefectChecker",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Brent 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Tyurin 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Kaleem 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Staderini 2022",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Amiet 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Arganaraz 2020",
-              "alias": "Re-entrancy"
-            },
-            {
-              "ref_id": "Staderini 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Munir 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Hu 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Iii William E Bodell 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Perez 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Huang 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Li 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Smart Contract Security Field Guide 2023",
-              "alias": "Single-Function Reentrancy"
-            },
-            {
-              "ref_id": "Consensys Diligence 2022",
-              "alias": "Single-Function Reentrancy"
-            },
-            {
-              "ref_id": "DASP Top10 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "securify 2.0 2021",
-              "alias": "DAO"
-            },
-            {
-              "ref_id": "SMARTDEC 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Kadenzipfel 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Sigmaprime SIGP 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Trail of Bits 2023",
-              "alias": "Re-entrancy"
-            }
-          ],
-          "cwes": [
-            "CWE-841: Improper Enforcement of Behavioral Workflow",
-            "CWE-691: Insufficient Control Flow Management"
-          ],
-          "swcs": [
-            "SWC-107: Reentrancy"
-          ],
-          "tools": [
-            "vandal",
-            "sfuzz",
-            "securify",
-            "oyente",
-            "osiris",
-            "mythril",
-            "ethor",
-            "conkas",
-            "confuzzius",
-            "semgrep"
-          ],
-          "mitigations": [],
-          "parent_vulnerabilities": [
-            "A given function is invoked multiple times unexpectedly"
-          ],
-          "enabling_vulnerabilities": [],
-          "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-d9ecaa37-3017-4619-80bf-324afc7d1438"
-        }
-      ]
-    },
-    {
-      "locations": [
-        {
-          "message": {
-            "text": "contract SimpleDAO.sol, function withdraw"
-          },
-          "physicalLocation": {
-            "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.sol"
-            }
-          }
-        }
-      ],
-      "message": {
-        "text": "Reentrancy"
-      },
-      "ruleId": "sfuzz_Reentrancy",
-      "sbo": [
-        {
-          "name": "Reentrancy",
-          "description": "- A single function reentrancy attack occurs when a vulnerable function is the same  function that an attacker is trying to recursively call -an external call within the function triggers the function again, initiating the  half-completed execution multiple times, leading to a cascade of state changes. not reentrant functions which can misbehave if re-entered (called back ) before their termination (using the fallback function) causing i.e. loops  until out-of gas or stack-size reached. It follows from incorrect management of the  global state of an externally invokable function, which manages to re-enter the  caller function in an inconsistent state",
-          "sample_code": "",
-          "level": "Solidity Language",
-          "categories": [
-            "Reentrancy-related"
-          ],
-          "attacks": [
-            "DAO"
-          ],
-          "references": [
-            {
-              "ref_id": "Atzei 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Rameder 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Vidal 2023 - OpenSCV",
-              "alias": "Unsafe Credit Transfer"
-            },
-            {
-              "ref_id": "SWC",
-              "alias": "SWC-107: Reentrancy"
-            },
-            {
-              "ref_id": "Tikhomirov 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Kalra 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Grishchenko 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Zhou 2022",
-              "alias": "Re-entrancy"
-            },
-            {
-              "ref_id": "Praitheeshan 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Di Angelo 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Sayeed 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Durieux 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Luu 2016",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Dika 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Alharby 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Zhang 2023",
-              "alias": "Reentrancy - RE"
-            },
-            {
-              "ref_id": "Qian 2022",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chu 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chaliasos 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Almakhour 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2022",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2022 DefectChecker",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Brent 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Tyurin 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Kaleem 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Staderini 2022",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Amiet 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Arganaraz 2020",
-              "alias": "Re-entrancy"
-            },
-            {
-              "ref_id": "Staderini 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Munir 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Hu 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Iii William E Bodell 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Perez 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Huang 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Li 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Smart Contract Security Field Guide 2023",
-              "alias": "Single-Function Reentrancy"
-            },
-            {
-              "ref_id": "Consensys Diligence 2022",
-              "alias": "Single-Function Reentrancy"
-            },
-            {
-              "ref_id": "DASP Top10 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "securify 2.0 2021",
-              "alias": "DAO"
-            },
-            {
-              "ref_id": "SMARTDEC 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Kadenzipfel 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Sigmaprime SIGP 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Trail of Bits 2023",
-              "alias": "Re-entrancy"
-            }
-          ],
-          "cwes": [
-            "CWE-841: Improper Enforcement of Behavioral Workflow",
-            "CWE-691: Insufficient Control Flow Management"
-          ],
-          "swcs": [
-            "SWC-107: Reentrancy"
-          ],
-          "tools": [
-            "vandal",
-            "sfuzz",
-            "securify",
-            "oyente",
-            "osiris",
-            "mythril",
-            "ethor",
-            "conkas",
-            "confuzzius",
-            "semgrep"
-          ],
-          "mitigations": [],
-          "parent_vulnerabilities": [
-            "A given function is invoked multiple times unexpectedly"
-          ],
-          "enabling_vulnerabilities": [],
-          "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-d9ecaa37-3017-4619-80bf-324afc7d1438"
-        }
-      ]
-    },
-    {
-      "locations": [
-        {
-          "message": {
-            "text": "contract SimpleDAO.sol, function queryCredit"
-          },
-          "physicalLocation": {
-            "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.sol"
-            }
-          }
-        }
-      ],
-      "message": {
-        "text": "Reentrancy"
-      },
-      "ruleId": "sfuzz_Reentrancy",
-      "sbo": [
-        {
-          "name": "Reentrancy",
-          "description": "- A single function reentrancy attack occurs when a vulnerable function is the same  function that an attacker is trying to recursively call -an external call within the function triggers the function again, initiating the  half-completed execution multiple times, leading to a cascade of state changes. not reentrant functions which can misbehave if re-entered (called back ) before their termination (using the fallback function) causing i.e. loops  until out-of gas or stack-size reached. It follows from incorrect management of the  global state of an externally invokable function, which manages to re-enter the  caller function in an inconsistent state",
-          "sample_code": "",
-          "level": "Solidity Language",
-          "categories": [
-            "Reentrancy-related"
-          ],
-          "attacks": [
-            "DAO"
-          ],
-          "references": [
-            {
-              "ref_id": "Atzei 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Rameder 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Vidal 2023 - OpenSCV",
-              "alias": "Unsafe Credit Transfer"
-            },
-            {
-              "ref_id": "SWC",
-              "alias": "SWC-107: Reentrancy"
-            },
-            {
-              "ref_id": "Tikhomirov 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Kalra 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Grishchenko 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Zhou 2022",
-              "alias": "Re-entrancy"
-            },
-            {
-              "ref_id": "Praitheeshan 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Di Angelo 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Sayeed 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Durieux 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Luu 2016",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Dika 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Alharby 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Zhang 2023",
-              "alias": "Reentrancy - RE"
-            },
-            {
-              "ref_id": "Qian 2022",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chu 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chaliasos 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Almakhour 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2022",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2022 DefectChecker",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Brent 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Tyurin 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Kaleem 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Staderini 2022",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Amiet 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Arganaraz 2020",
-              "alias": "Re-entrancy"
-            },
-            {
-              "ref_id": "Staderini 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Munir 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Hu 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Iii William E Bodell 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Perez 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Huang 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Li 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Smart Contract Security Field Guide 2023",
-              "alias": "Single-Function Reentrancy"
-            },
-            {
-              "ref_id": "Consensys Diligence 2022",
-              "alias": "Single-Function Reentrancy"
-            },
-            {
-              "ref_id": "DASP Top10 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "securify 2.0 2021",
-              "alias": "DAO"
-            },
-            {
-              "ref_id": "SMARTDEC 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Kadenzipfel 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Sigmaprime SIGP 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Trail of Bits 2023",
-              "alias": "Re-entrancy"
-            }
-          ],
-          "cwes": [
-            "CWE-841: Improper Enforcement of Behavioral Workflow",
-            "CWE-691: Insufficient Control Flow Management"
-          ],
-          "swcs": [
-            "SWC-107: Reentrancy"
-          ],
-          "tools": [
-            "vandal",
-            "sfuzz",
-            "securify",
-            "oyente",
-            "osiris",
-            "mythril",
-            "ethor",
-            "conkas",
-            "confuzzius",
-            "semgrep"
-          ],
-          "mitigations": [],
-          "parent_vulnerabilities": [
-            "A given function is invoked multiple times unexpectedly"
-          ],
-          "enabling_vulnerabilities": [],
-          "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-d9ecaa37-3017-4619-80bf-324afc7d1438"
-        }
-      ]
-    },
-    {
-      "locations": [
-        {
-          "message": {
-            "text": "contract SimpleDAO.sol, function donate"
-          },
-          "physicalLocation": {
-            "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.sol"
-            }
-          }
-        }
-      ],
-      "message": {
-        "text": "Exception Disorder"
-      },
-      "ruleId": "sfuzz_Exception_Disorder",
-      "sbo": [
-        {
-          "name": "Mishandled Exception",
-          "description": "Unreported exception or error  in the callee (i.e. call doesn't propagate exceptions) ",
-          "sample_code": "",
-          "level": "Solidity Language",
-          "categories": [
-            "Exceptions"
-          ],
-          "attacks": [
-            "King of the Ether Throne",
-            "DAO",
-            "Integer Over/Under Flow",
-            "GovernMental"
-          ],
-          "references": [
-            {
-              "ref_id": "Atzei 2017",
-              "alias": "Exception Disorders"
-            },
-            {
-              "ref_id": "Kushwaha 2022",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Vidal 2023 - OpenSCV",
-              "alias": "Improper Use of Exception Handling Functions"
-            },
-            {
-              "ref_id": "securify 2.0 2021",
-              "alias": "Unhandled Exception"
-            },
-            {
-              "ref_id": "Rameder 2021",
-              "alias": "Unchecked Low level call / send Return Values"
-            },
-            {
-              "ref_id": "Grishchenko 2018",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Zhou 2022",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Praitheeshan 2019",
-              "alias": "Exception Handling /Mishandled Exceptions"
-            },
-            {
-              "ref_id": "Chen 2020",
-              "alias": "Unchecked Call Return Value"
-            },
-            {
-              "ref_id": "Luu 2016",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Dika 2017",
-              "alias": "Exception Disorders"
-            },
-            {
-              "ref_id": "Zhang 2023",
-              "alias": "Mishandled Exception - ME"
-            },
-            {
-              "ref_id": "Qian 2022",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Chu 2023",
-              "alias": "Unhandled Exception"
-            },
-            {
-              "ref_id": "Chaliasos 2023",
-              "alias": "Unhandled or Mishandled Exceptions"
-            },
-            {
-              "ref_id": "Staderini 2022",
-              "alias": "Exception Disorders"
-            },
-            {
-              "ref_id": "Staderini 2020",
-              "alias": "Exception Disorders"
-            },
-            {
-              "ref_id": "Munir 2023",
-              "alias": "Mishandled / Unhandled Exceptions"
-            },
-            {
-              "ref_id": "Iii William E Bodell 2023",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Perez 2021",
-              "alias": "Unhandled Exception"
-            },
-            {
-              "ref_id": "Huang 2019",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Li 2017",
-              "alias": "Mishandled Exception / Exception Disorders"
-            },
-            {
-              "ref_id": "Tsankov 2018",
-              "alias": "Unhandled Exception"
-            }
-          ],
-          "cwes": [
-            "CWE-703: Improper Check or Handling of Exceptional Conditions",
-            "CWE-252: Unchecked Return Value"
-          ],
-          "swcs": [],
-          "tools": [
-            "sfuzz",
-            "securify",
-            "confuzzius"
-          ],
-          "mitigations": [],
-          "parent_vulnerabilities": [],
-          "enabling_vulnerabilities": [
-            "Unchecked External Call",
-            "Low Level Calls"
-          ],
-          "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-1ffb6012-1e2d-48d7-bff7-b608a411a4d5"
-        }
-      ]
-    },
-    {
-      "locations": [
-        {
-          "message": {
-            "text": "contract SimpleDAO.sol, function withdraw"
-          },
-          "physicalLocation": {
-            "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.sol"
-            }
-          }
-        }
-      ],
-      "message": {
-        "text": "Exception Disorder"
-      },
-      "ruleId": "sfuzz_Exception_Disorder",
-      "sbo": [
-        {
-          "name": "Mishandled Exception",
-          "description": "Unreported exception or error  in the callee (i.e. call doesn't propagate exceptions) ",
-          "sample_code": "",
-          "level": "Solidity Language",
-          "categories": [
-            "Exceptions"
-          ],
-          "attacks": [
-            "King of the Ether Throne",
-            "DAO",
-            "Integer Over/Under Flow",
-            "GovernMental"
-          ],
-          "references": [
-            {
-              "ref_id": "Atzei 2017",
-              "alias": "Exception Disorders"
-            },
-            {
-              "ref_id": "Kushwaha 2022",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Vidal 2023 - OpenSCV",
-              "alias": "Improper Use of Exception Handling Functions"
-            },
-            {
-              "ref_id": "securify 2.0 2021",
-              "alias": "Unhandled Exception"
-            },
-            {
-              "ref_id": "Rameder 2021",
-              "alias": "Unchecked Low level call / send Return Values"
-            },
-            {
-              "ref_id": "Grishchenko 2018",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Zhou 2022",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Praitheeshan 2019",
-              "alias": "Exception Handling /Mishandled Exceptions"
-            },
-            {
-              "ref_id": "Chen 2020",
-              "alias": "Unchecked Call Return Value"
-            },
-            {
-              "ref_id": "Luu 2016",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Dika 2017",
-              "alias": "Exception Disorders"
-            },
-            {
-              "ref_id": "Zhang 2023",
-              "alias": "Mishandled Exception - ME"
-            },
-            {
-              "ref_id": "Qian 2022",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Chu 2023",
-              "alias": "Unhandled Exception"
-            },
-            {
-              "ref_id": "Chaliasos 2023",
-              "alias": "Unhandled or Mishandled Exceptions"
-            },
-            {
-              "ref_id": "Staderini 2022",
-              "alias": "Exception Disorders"
-            },
-            {
-              "ref_id": "Staderini 2020",
-              "alias": "Exception Disorders"
-            },
-            {
-              "ref_id": "Munir 2023",
-              "alias": "Mishandled / Unhandled Exceptions"
-            },
-            {
-              "ref_id": "Iii William E Bodell 2023",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Perez 2021",
-              "alias": "Unhandled Exception"
-            },
-            {
-              "ref_id": "Huang 2019",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Li 2017",
-              "alias": "Mishandled Exception / Exception Disorders"
-            },
-            {
-              "ref_id": "Tsankov 2018",
-              "alias": "Unhandled Exception"
-            }
-          ],
-          "cwes": [
-            "CWE-703: Improper Check or Handling of Exceptional Conditions",
-            "CWE-252: Unchecked Return Value"
-          ],
-          "swcs": [],
-          "tools": [
-            "sfuzz",
-            "securify",
-            "confuzzius"
-          ],
-          "mitigations": [],
-          "parent_vulnerabilities": [],
-          "enabling_vulnerabilities": [
-            "Unchecked External Call",
-            "Low Level Calls"
-          ],
-          "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-1ffb6012-1e2d-48d7-bff7-b608a411a4d5"
-        }
-      ]
-    },
-    {
-      "locations": [
-        {
-          "message": {
-            "text": "contract SimpleDAO.sol, function queryCredit"
-          },
-          "physicalLocation": {
-            "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.sol"
-            }
-          }
-        }
-      ],
-      "message": {
-        "text": "Exception Disorder"
-      },
-      "ruleId": "sfuzz_Exception_Disorder",
-      "sbo": [
-        {
-          "name": "Mishandled Exception",
-          "description": "Unreported exception or error  in the callee (i.e. call doesn't propagate exceptions) ",
-          "sample_code": "",
-          "level": "Solidity Language",
-          "categories": [
-            "Exceptions"
-          ],
-          "attacks": [
-            "King of the Ether Throne",
-            "DAO",
-            "Integer Over/Under Flow",
-            "GovernMental"
-          ],
-          "references": [
-            {
-              "ref_id": "Atzei 2017",
-              "alias": "Exception Disorders"
-            },
-            {
-              "ref_id": "Kushwaha 2022",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Vidal 2023 - OpenSCV",
-              "alias": "Improper Use of Exception Handling Functions"
-            },
-            {
-              "ref_id": "securify 2.0 2021",
-              "alias": "Unhandled Exception"
-            },
-            {
-              "ref_id": "Rameder 2021",
-              "alias": "Unchecked Low level call / send Return Values"
-            },
-            {
-              "ref_id": "Grishchenko 2018",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Zhou 2022",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Praitheeshan 2019",
-              "alias": "Exception Handling /Mishandled Exceptions"
-            },
-            {
-              "ref_id": "Chen 2020",
-              "alias": "Unchecked Call Return Value"
-            },
-            {
-              "ref_id": "Luu 2016",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Dika 2017",
-              "alias": "Exception Disorders"
-            },
-            {
-              "ref_id": "Zhang 2023",
-              "alias": "Mishandled Exception - ME"
-            },
-            {
-              "ref_id": "Qian 2022",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Chu 2023",
-              "alias": "Unhandled Exception"
-            },
-            {
-              "ref_id": "Chaliasos 2023",
-              "alias": "Unhandled or Mishandled Exceptions"
-            },
-            {
-              "ref_id": "Staderini 2022",
-              "alias": "Exception Disorders"
-            },
-            {
-              "ref_id": "Staderini 2020",
-              "alias": "Exception Disorders"
-            },
-            {
-              "ref_id": "Munir 2023",
-              "alias": "Mishandled / Unhandled Exceptions"
-            },
-            {
-              "ref_id": "Iii William E Bodell 2023",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Perez 2021",
-              "alias": "Unhandled Exception"
-            },
-            {
-              "ref_id": "Huang 2019",
-              "alias": "Mishandled Exception"
-            },
-            {
-              "ref_id": "Li 2017",
-              "alias": "Mishandled Exception / Exception Disorders"
-            },
-            {
-              "ref_id": "Tsankov 2018",
-              "alias": "Unhandled Exception"
-            }
-          ],
-          "cwes": [
-            "CWE-703: Improper Check or Handling of Exceptional Conditions",
-            "CWE-252: Unchecked Return Value"
-          ],
-          "swcs": [],
-          "tools": [
-            "sfuzz",
-            "securify",
-            "confuzzius"
-          ],
-          "mitigations": [],
-          "parent_vulnerabilities": [],
-          "enabling_vulnerabilities": [
-            "Unchecked External Call",
-            "Low Level Calls"
-          ],
-          "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-1ffb6012-1e2d-48d7-bff7-b608a411a4d5"
-        }
-      ]
-    }
-  ],
   "confuzzius": [
     {
       "locations": [
@@ -2352,7 +1190,8 @@
             "ethor",
             "conkas",
             "confuzzius",
-            "semgrep"
+            "semgrep",
+            "slither"
           ],
           "mitigations": [],
           "parent_vulnerabilities": [
@@ -2360,7 +1199,7 @@
           ],
           "enabling_vulnerabilities": [],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-d9ecaa37-3017-4619-80bf-324afc7d1438"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-b19d6805-3e26-4a93-8237-23fd200ec483"
         }
       ]
     },
@@ -2510,305 +1349,1179 @@
             "Low Level Calls"
           ],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-1ffb6012-1e2d-48d7-bff7-b608a411a4d5"
-        }
-      ]
-    },
-    {
-      "locations": [
-        {
-          "message": {
-            "text": "contract SimpleDAO"
-          },
-          "physicalLocation": {
-            "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.sol"
-            },
-            "region": {
-              "startLine": 13
-            }
-          }
-        }
-      ],
-      "message": {
-        "text": "Classification: SWC-114\nSeverity: Medium"
-      },
-      "ruleId": "confuzzius_Transaction_Order_Dependency",
-      "sbo": [
-        {
-          "name": "Transaction Ordering Dependency (TOD)",
-          "description": "dependant Txs invoked on the same contract not executed in proper  order rendering the original Tx irrelevant within the SC context relegating it to a lower  position in the block by amplifying the gas price to exceed the original Tx value,  often by ten times or more (The user's function may be orphaned, executed without   significant effect, or reverted due to running on an outdated state) ",
-          "sample_code": "",
-          "level": "Ethereum Blockchain",
-          "categories": [
-            "TOD-related"
-          ],
-          "attacks": [
-            "Bancor",
-            "GovernMental"
-          ],
-          "references": [
-            {
-              "ref_id": "Kushwaha 2022",
-              "alias": "Transaction Ordering Dependency (TOD)"
-            },
-            {
-              "ref_id": "Rameder 2021",
-              "alias": "Transaction Ordering Dependency (TOD)"
-            },
-            {
-              "ref_id": "Vidal 2023 - OpenSCV",
-              "alias": "Incorrect Function Call Order"
-            },
-            {
-              "ref_id": "SWC",
-              "alias": "SWC-114: Transaction Order Dependence"
-            },
-            {
-              "ref_id": "Kalra 2018",
-              "alias": "Transaction Order Dependence"
-            },
-            {
-              "ref_id": "Grishchenko 2018",
-              "alias": "Transaction Order Dependency"
-            },
-            {
-              "ref_id": "Zhou 2022",
-              "alias": "Transaction Order Dependence"
-            },
-            {
-              "ref_id": "Praitheeshan 2019",
-              "alias": "Transaction Ordering Dependency (TOD)"
-            },
-            {
-              "ref_id": "Di Angelo 2019",
-              "alias": "Transaction Ordering Dependency (TOD)"
-            },
-            {
-              "ref_id": "Sayeed 2020",
-              "alias": "Transaction Ordering Dependency (TOD)"
-            },
-            {
-              "ref_id": "Durieux 2020",
-              "alias": "Front Running"
-            },
-            {
-              "ref_id": "Chen 2020",
-              "alias": "Transaction Ordering Dependence / Front Running"
-            },
-            {
-              "ref_id": "Luu 2016",
-              "alias": "Transaction Ordering Dependence / Front Running"
-            },
-            {
-              "ref_id": "Dika 2017",
-              "alias": "Transaction Ordering Dependency (TOD)"
-            },
-            {
-              "ref_id": "Alharby 2017",
-              "alias": "Transaction Ordering Dependency (TOD)"
-            },
-            {
-              "ref_id": "Zhang 2023",
-              "alias": "Transaction Ordering Dependency (TOD)"
-            },
-            {
-              "ref_id": "Qian 2022",
-              "alias": "Transaction Ordering Dependency (TOD)"
-            },
-            {
-              "ref_id": "Chu 2023",
-              "alias": "Transaction Order Dependency"
-            },
-            {
-              "ref_id": "Chaliasos 2023",
-              "alias": "Transaction Order Dependence"
-            },
-            {
-              "ref_id": "Chen 2023",
-              "alias": "Transaction Ordering Dependency (TOD)"
-            },
-            {
-              "ref_id": "Tyurin 2019",
-              "alias": "Transaction Ordering Dependence / Front Running"
-            },
-            {
-              "ref_id": "Staderini 2022",
-              "alias": "Transaction Ordering Dependency (TOD)"
-            },
-            {
-              "ref_id": "Amiet 2021",
-              "alias": "Transaction Ordering Dependence / Front Running"
-            },
-            {
-              "ref_id": "Staderini 2020",
-              "alias": "Transaction Ordering Dependency (TOD)"
-            },
-            {
-              "ref_id": "Munir 2023",
-              "alias": "Transaction Ordering Dependency (TOD)"
-            },
-            {
-              "ref_id": "Hu 2023",
-              "alias": "Transaction Order Dependency"
-            },
-            {
-              "ref_id": "Iii William E Bodell 2023",
-              "alias": "Transaction Ordering Dependency (TOD)"
-            },
-            {
-              "ref_id": "Perez 2021",
-              "alias": "Transaction Order Dependency"
-            },
-            {
-              "ref_id": "Huang 2019",
-              "alias": "Transaction Order Dependence"
-            },
-            {
-              "ref_id": "Li 2017",
-              "alias": "Transaction Ordering Dependency (TOD)"
-            },
-            {
-              "ref_id": "Tsankov 2018",
-              "alias": "Transaction Ordering Dependency (TOD)"
-            },
-            {
-              "ref_id": "Smart Contract Security Field Guide 2023",
-              "alias": "Displacement"
-            },
-            {
-              "ref_id": "DASP Top10 2018",
-              "alias": "Front Running"
-            },
-            {
-              "ref_id": "SMARTDEC 2018",
-              "alias": "Front Running / Transaction Reordering"
-            },
-            {
-              "ref_id": "Kadenzipfel 2023",
-              "alias": "Transaction Ordering Dependence / Front Running"
-            },
-            {
-              "ref_id": "Sigmaprime SIGP 2021",
-              "alias": "Race Conditions / Frontrunning"
-            },
-            {
-              "ref_id": "Trail of Bits 2023",
-              "alias": "Race Condition"
-            }
-          ],
-          "cwes": [
-            "CWE-362: Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
-            "CWE-691: Insufficient Control Flow Management"
-          ],
-          "swcs": [
-            "SWC-114: Transaction Order Dependence"
-          ],
-          "tools": [
-            "oyente",
-            "conkas",
-            "confuzzius",
-            "osiris"
-          ],
-          "mitigations": [],
-          "parent_vulnerabilities": [],
-          "enabling_vulnerabilities": [],
-          "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-c6c95867-d0ac-475a-a0bf-32d2d31b4f2f"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-c736aa6a-ed15-4ff7-8dfc-1d5a7faa5640"
         }
       ]
     }
   ],
-  "mythril": [
+  "sfuzz": [
     {
       "locations": [
         {
           "message": {
-            "text": "contract MAIN, function constructor"
+            "text": "contract SimpleDAO.sol, function donate"
           },
           "physicalLocation": {
             "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.hex"
-            },
-            "region": {
-              "startColumn": 23,
-              "startLine": 1
+              "uri": "./smartbugs/samples/SimpleDAO.sol"
             }
           }
         }
       ],
       "message": {
-        "text": "An assertion violation was triggered.\nIt is possible to trigger an assertion violation. Note that Solidity assert() statements should only be used to check invariants. Review the transaction trace generated for this issue and either make sure your program logic is correct, or use require() instead of assert() if your goal is to constrain user inputs or enforce preconditions. Remember to validate inputs from both callers (for instance, via passed arguments) and callees (for instance, via return values).\nClassification: SWC-110\nSeverity: Medium"
+        "text": "Reentrancy"
       },
-      "ruleId": "mythril_0_23_15_Exception_State_SWC_110",
+      "ruleId": "sfuzz_Reentrancy",
       "sbo": [
         {
-          "name": "Assert / Require / Revert Violation",
-          "description": "Vulnerability where the conditions specified by the contract's assertions, requirements, or revert statements are not properly met during execution",
+          "name": "Reentrancy",
+          "description": "- A single function reentrancy attack occurs when a vulnerable function is the same  function that an attacker is trying to recursively call -an external call within the function triggers the function again, initiating the  half-completed execution multiple times, leading to a cascade of state changes. not reentrant functions which can misbehave if re-entered (called back ) before their termination (using the fallback function) causing i.e. loops  until out-of gas or stack-size reached. It follows from incorrect management of the  global state of an externally invokable function, which manages to re-enter the  caller function in an inconsistent state",
           "sample_code": "",
           "level": "Solidity Language",
           "categories": [
-            "Assert / Require / Revert Statements"
+            "Reentrancy-related"
           ],
-          "attacks": [],
+          "attacks": [
+            "DAO"
+          ],
           "references": [
             {
+              "ref_id": "Atzei 2017",
+              "alias": "Reentrancy"
+            },
+            {
               "ref_id": "Rameder 2021",
-              "alias": "Assert / Require / Revert Violation"
+              "alias": "Reentrancy"
             },
             {
               "ref_id": "Vidal 2023 - OpenSCV",
-              "alias": "Wrong Selection of Guard Function"
+              "alias": "Unsafe Credit Transfer"
             },
             {
               "ref_id": "SWC",
-              "alias": "SWC-110: Assert Violation"
+              "alias": "SWC-107: Reentrancy"
+            },
+            {
+              "ref_id": "Tikhomirov 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Kalra 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Grishchenko 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Zhou 2022",
+              "alias": "Re-entrancy"
+            },
+            {
+              "ref_id": "Praitheeshan 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Di Angelo 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Sayeed 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Durieux 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Luu 2016",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Dika 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Alharby 2017",
+              "alias": "Reentrancy"
             },
             {
               "ref_id": "Zhang 2023",
-              "alias": "Assertion Failure - AF"
+              "alias": "Reentrancy - RE"
+            },
+            {
+              "ref_id": "Qian 2022",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chu 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chaliasos 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Almakhour 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2022",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2022 DefectChecker",
+              "alias": "Reentrancy"
             },
             {
               "ref_id": "Chen 2023",
-              "alias": "Strict require"
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Brent 2018",
+              "alias": "Reentrancy"
             },
             {
               "ref_id": "Tyurin 2019",
-              "alias": "Using Built-in Functions"
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Kaleem 2020",
+              "alias": "Reentrancy"
             },
             {
               "ref_id": "Staderini 2022",
-              "alias": "Requirement Violation"
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Amiet 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Arganaraz 2020",
+              "alias": "Re-entrancy"
             },
             {
               "ref_id": "Staderini 2020",
-              "alias": "Requirement Violation"
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Munir 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Hu 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Iii William E Bodell 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Perez 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Huang 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Li 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Smart Contract Security Field Guide 2023",
+              "alias": "Single-Function Reentrancy"
+            },
+            {
+              "ref_id": "Consensys Diligence 2022",
+              "alias": "Single-Function Reentrancy"
+            },
+            {
+              "ref_id": "DASP Top10 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "securify 2.0 2021",
+              "alias": "DAO"
+            },
+            {
+              "ref_id": "SMARTDEC 2018",
+              "alias": "Reentrancy"
             },
             {
               "ref_id": "Kadenzipfel 2023",
-              "alias": "Assert / Require / Revert Violation"
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Sigmaprime SIGP 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Trail of Bits 2023",
+              "alias": "Re-entrancy"
             }
           ],
           "cwes": [
-            "CWE-20: Improper Input Validation",
-            "CWE-396: Declaration of Catch for Generic Exception"
+            "CWE-841: Improper Enforcement of Behavioral Workflow",
+            "CWE-691: Insufficient Control Flow Management"
           ],
-          "swcs": [],
+          "swcs": [
+            "SWC-107: Reentrancy"
+          ],
           "tools": [
-            "smartcheck",
-            "slither",
-            "mythril"
+            "vandal",
+            "sfuzz",
+            "securify",
+            "oyente",
+            "osiris",
+            "mythril",
+            "ethor",
+            "conkas",
+            "confuzzius",
+            "semgrep",
+            "slither"
           ],
           "mitigations": [],
-          "parent_vulnerabilities": [],
-          "enabling_vulnerabilities": [],
-          "impacting_vulnerabilities": [
-            "Reentrancy"
+          "parent_vulnerabilities": [
+            "A given function is invoked multiple times unexpectedly"
           ],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-ae0c5775-91fc-40bb-9a58-7ad1b8093c4a"
+          "enabling_vulnerabilities": [],
+          "impacting_vulnerabilities": [],
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-b19d6805-3e26-4a93-8237-23fd200ec483"
         }
       ]
     },
+    {
+      "locations": [
+        {
+          "message": {
+            "text": "contract SimpleDAO.sol, function withdraw"
+          },
+          "physicalLocation": {
+            "artifactLocation": {
+              "uri": "./smartbugs/samples/SimpleDAO.sol"
+            }
+          }
+        }
+      ],
+      "message": {
+        "text": "Reentrancy"
+      },
+      "ruleId": "sfuzz_Reentrancy",
+      "sbo": [
+        {
+          "name": "Reentrancy",
+          "description": "- A single function reentrancy attack occurs when a vulnerable function is the same  function that an attacker is trying to recursively call -an external call within the function triggers the function again, initiating the  half-completed execution multiple times, leading to a cascade of state changes. not reentrant functions which can misbehave if re-entered (called back ) before their termination (using the fallback function) causing i.e. loops  until out-of gas or stack-size reached. It follows from incorrect management of the  global state of an externally invokable function, which manages to re-enter the  caller function in an inconsistent state",
+          "sample_code": "",
+          "level": "Solidity Language",
+          "categories": [
+            "Reentrancy-related"
+          ],
+          "attacks": [
+            "DAO"
+          ],
+          "references": [
+            {
+              "ref_id": "Atzei 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Rameder 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Vidal 2023 - OpenSCV",
+              "alias": "Unsafe Credit Transfer"
+            },
+            {
+              "ref_id": "SWC",
+              "alias": "SWC-107: Reentrancy"
+            },
+            {
+              "ref_id": "Tikhomirov 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Kalra 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Grishchenko 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Zhou 2022",
+              "alias": "Re-entrancy"
+            },
+            {
+              "ref_id": "Praitheeshan 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Di Angelo 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Sayeed 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Durieux 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Luu 2016",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Dika 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Alharby 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Zhang 2023",
+              "alias": "Reentrancy - RE"
+            },
+            {
+              "ref_id": "Qian 2022",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chu 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chaliasos 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Almakhour 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2022",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2022 DefectChecker",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Brent 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Tyurin 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Kaleem 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Staderini 2022",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Amiet 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Arganaraz 2020",
+              "alias": "Re-entrancy"
+            },
+            {
+              "ref_id": "Staderini 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Munir 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Hu 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Iii William E Bodell 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Perez 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Huang 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Li 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Smart Contract Security Field Guide 2023",
+              "alias": "Single-Function Reentrancy"
+            },
+            {
+              "ref_id": "Consensys Diligence 2022",
+              "alias": "Single-Function Reentrancy"
+            },
+            {
+              "ref_id": "DASP Top10 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "securify 2.0 2021",
+              "alias": "DAO"
+            },
+            {
+              "ref_id": "SMARTDEC 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Kadenzipfel 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Sigmaprime SIGP 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Trail of Bits 2023",
+              "alias": "Re-entrancy"
+            }
+          ],
+          "cwes": [
+            "CWE-841: Improper Enforcement of Behavioral Workflow",
+            "CWE-691: Insufficient Control Flow Management"
+          ],
+          "swcs": [
+            "SWC-107: Reentrancy"
+          ],
+          "tools": [
+            "vandal",
+            "sfuzz",
+            "securify",
+            "oyente",
+            "osiris",
+            "mythril",
+            "ethor",
+            "conkas",
+            "confuzzius",
+            "semgrep",
+            "slither"
+          ],
+          "mitigations": [],
+          "parent_vulnerabilities": [
+            "A given function is invoked multiple times unexpectedly"
+          ],
+          "enabling_vulnerabilities": [],
+          "impacting_vulnerabilities": [],
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-b19d6805-3e26-4a93-8237-23fd200ec483"
+        }
+      ]
+    },
+    {
+      "locations": [
+        {
+          "message": {
+            "text": "contract SimpleDAO.sol, function queryCredit"
+          },
+          "physicalLocation": {
+            "artifactLocation": {
+              "uri": "./smartbugs/samples/SimpleDAO.sol"
+            }
+          }
+        }
+      ],
+      "message": {
+        "text": "Reentrancy"
+      },
+      "ruleId": "sfuzz_Reentrancy",
+      "sbo": [
+        {
+          "name": "Reentrancy",
+          "description": "- A single function reentrancy attack occurs when a vulnerable function is the same  function that an attacker is trying to recursively call -an external call within the function triggers the function again, initiating the  half-completed execution multiple times, leading to a cascade of state changes. not reentrant functions which can misbehave if re-entered (called back ) before their termination (using the fallback function) causing i.e. loops  until out-of gas or stack-size reached. It follows from incorrect management of the  global state of an externally invokable function, which manages to re-enter the  caller function in an inconsistent state",
+          "sample_code": "",
+          "level": "Solidity Language",
+          "categories": [
+            "Reentrancy-related"
+          ],
+          "attacks": [
+            "DAO"
+          ],
+          "references": [
+            {
+              "ref_id": "Atzei 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Rameder 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Vidal 2023 - OpenSCV",
+              "alias": "Unsafe Credit Transfer"
+            },
+            {
+              "ref_id": "SWC",
+              "alias": "SWC-107: Reentrancy"
+            },
+            {
+              "ref_id": "Tikhomirov 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Kalra 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Grishchenko 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Zhou 2022",
+              "alias": "Re-entrancy"
+            },
+            {
+              "ref_id": "Praitheeshan 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Di Angelo 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Sayeed 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Durieux 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Luu 2016",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Dika 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Alharby 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Zhang 2023",
+              "alias": "Reentrancy - RE"
+            },
+            {
+              "ref_id": "Qian 2022",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chu 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chaliasos 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Almakhour 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2022",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2022 DefectChecker",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Brent 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Tyurin 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Kaleem 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Staderini 2022",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Amiet 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Arganaraz 2020",
+              "alias": "Re-entrancy"
+            },
+            {
+              "ref_id": "Staderini 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Munir 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Hu 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Iii William E Bodell 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Perez 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Huang 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Li 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Smart Contract Security Field Guide 2023",
+              "alias": "Single-Function Reentrancy"
+            },
+            {
+              "ref_id": "Consensys Diligence 2022",
+              "alias": "Single-Function Reentrancy"
+            },
+            {
+              "ref_id": "DASP Top10 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "securify 2.0 2021",
+              "alias": "DAO"
+            },
+            {
+              "ref_id": "SMARTDEC 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Kadenzipfel 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Sigmaprime SIGP 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Trail of Bits 2023",
+              "alias": "Re-entrancy"
+            }
+          ],
+          "cwes": [
+            "CWE-841: Improper Enforcement of Behavioral Workflow",
+            "CWE-691: Insufficient Control Flow Management"
+          ],
+          "swcs": [
+            "SWC-107: Reentrancy"
+          ],
+          "tools": [
+            "vandal",
+            "sfuzz",
+            "securify",
+            "oyente",
+            "osiris",
+            "mythril",
+            "ethor",
+            "conkas",
+            "confuzzius",
+            "semgrep",
+            "slither"
+          ],
+          "mitigations": [],
+          "parent_vulnerabilities": [
+            "A given function is invoked multiple times unexpectedly"
+          ],
+          "enabling_vulnerabilities": [],
+          "impacting_vulnerabilities": [],
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-b19d6805-3e26-4a93-8237-23fd200ec483"
+        }
+      ]
+    },
+    {
+      "locations": [
+        {
+          "message": {
+            "text": "contract SimpleDAO.sol, function donate"
+          },
+          "physicalLocation": {
+            "artifactLocation": {
+              "uri": "./smartbugs/samples/SimpleDAO.sol"
+            }
+          }
+        }
+      ],
+      "message": {
+        "text": "Exception Disorder"
+      },
+      "ruleId": "sfuzz_Exception_Disorder",
+      "sbo": [
+        {
+          "name": "Mishandled Exception",
+          "description": "Unreported exception or error  in the callee (i.e. call doesn't propagate exceptions) ",
+          "sample_code": "",
+          "level": "Solidity Language",
+          "categories": [
+            "Exceptions"
+          ],
+          "attacks": [
+            "King of the Ether Throne",
+            "DAO",
+            "Integer Over/Under Flow",
+            "GovernMental"
+          ],
+          "references": [
+            {
+              "ref_id": "Atzei 2017",
+              "alias": "Exception Disorders"
+            },
+            {
+              "ref_id": "Kushwaha 2022",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Vidal 2023 - OpenSCV",
+              "alias": "Improper Use of Exception Handling Functions"
+            },
+            {
+              "ref_id": "securify 2.0 2021",
+              "alias": "Unhandled Exception"
+            },
+            {
+              "ref_id": "Rameder 2021",
+              "alias": "Unchecked Low level call / send Return Values"
+            },
+            {
+              "ref_id": "Grishchenko 2018",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Zhou 2022",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Praitheeshan 2019",
+              "alias": "Exception Handling /Mishandled Exceptions"
+            },
+            {
+              "ref_id": "Chen 2020",
+              "alias": "Unchecked Call Return Value"
+            },
+            {
+              "ref_id": "Luu 2016",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Dika 2017",
+              "alias": "Exception Disorders"
+            },
+            {
+              "ref_id": "Zhang 2023",
+              "alias": "Mishandled Exception - ME"
+            },
+            {
+              "ref_id": "Qian 2022",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Chu 2023",
+              "alias": "Unhandled Exception"
+            },
+            {
+              "ref_id": "Chaliasos 2023",
+              "alias": "Unhandled or Mishandled Exceptions"
+            },
+            {
+              "ref_id": "Staderini 2022",
+              "alias": "Exception Disorders"
+            },
+            {
+              "ref_id": "Staderini 2020",
+              "alias": "Exception Disorders"
+            },
+            {
+              "ref_id": "Munir 2023",
+              "alias": "Mishandled / Unhandled Exceptions"
+            },
+            {
+              "ref_id": "Iii William E Bodell 2023",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Perez 2021",
+              "alias": "Unhandled Exception"
+            },
+            {
+              "ref_id": "Huang 2019",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Li 2017",
+              "alias": "Mishandled Exception / Exception Disorders"
+            },
+            {
+              "ref_id": "Tsankov 2018",
+              "alias": "Unhandled Exception"
+            }
+          ],
+          "cwes": [
+            "CWE-703: Improper Check or Handling of Exceptional Conditions",
+            "CWE-252: Unchecked Return Value"
+          ],
+          "swcs": [],
+          "tools": [
+            "sfuzz",
+            "securify",
+            "confuzzius"
+          ],
+          "mitigations": [],
+          "parent_vulnerabilities": [],
+          "enabling_vulnerabilities": [
+            "Unchecked External Call",
+            "Low Level Calls"
+          ],
+          "impacting_vulnerabilities": [],
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-c736aa6a-ed15-4ff7-8dfc-1d5a7faa5640"
+        }
+      ]
+    },
+    {
+      "locations": [
+        {
+          "message": {
+            "text": "contract SimpleDAO.sol, function withdraw"
+          },
+          "physicalLocation": {
+            "artifactLocation": {
+              "uri": "./smartbugs/samples/SimpleDAO.sol"
+            }
+          }
+        }
+      ],
+      "message": {
+        "text": "Exception Disorder"
+      },
+      "ruleId": "sfuzz_Exception_Disorder",
+      "sbo": [
+        {
+          "name": "Mishandled Exception",
+          "description": "Unreported exception or error  in the callee (i.e. call doesn't propagate exceptions) ",
+          "sample_code": "",
+          "level": "Solidity Language",
+          "categories": [
+            "Exceptions"
+          ],
+          "attacks": [
+            "King of the Ether Throne",
+            "DAO",
+            "Integer Over/Under Flow",
+            "GovernMental"
+          ],
+          "references": [
+            {
+              "ref_id": "Atzei 2017",
+              "alias": "Exception Disorders"
+            },
+            {
+              "ref_id": "Kushwaha 2022",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Vidal 2023 - OpenSCV",
+              "alias": "Improper Use of Exception Handling Functions"
+            },
+            {
+              "ref_id": "securify 2.0 2021",
+              "alias": "Unhandled Exception"
+            },
+            {
+              "ref_id": "Rameder 2021",
+              "alias": "Unchecked Low level call / send Return Values"
+            },
+            {
+              "ref_id": "Grishchenko 2018",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Zhou 2022",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Praitheeshan 2019",
+              "alias": "Exception Handling /Mishandled Exceptions"
+            },
+            {
+              "ref_id": "Chen 2020",
+              "alias": "Unchecked Call Return Value"
+            },
+            {
+              "ref_id": "Luu 2016",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Dika 2017",
+              "alias": "Exception Disorders"
+            },
+            {
+              "ref_id": "Zhang 2023",
+              "alias": "Mishandled Exception - ME"
+            },
+            {
+              "ref_id": "Qian 2022",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Chu 2023",
+              "alias": "Unhandled Exception"
+            },
+            {
+              "ref_id": "Chaliasos 2023",
+              "alias": "Unhandled or Mishandled Exceptions"
+            },
+            {
+              "ref_id": "Staderini 2022",
+              "alias": "Exception Disorders"
+            },
+            {
+              "ref_id": "Staderini 2020",
+              "alias": "Exception Disorders"
+            },
+            {
+              "ref_id": "Munir 2023",
+              "alias": "Mishandled / Unhandled Exceptions"
+            },
+            {
+              "ref_id": "Iii William E Bodell 2023",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Perez 2021",
+              "alias": "Unhandled Exception"
+            },
+            {
+              "ref_id": "Huang 2019",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Li 2017",
+              "alias": "Mishandled Exception / Exception Disorders"
+            },
+            {
+              "ref_id": "Tsankov 2018",
+              "alias": "Unhandled Exception"
+            }
+          ],
+          "cwes": [
+            "CWE-703: Improper Check or Handling of Exceptional Conditions",
+            "CWE-252: Unchecked Return Value"
+          ],
+          "swcs": [],
+          "tools": [
+            "sfuzz",
+            "securify",
+            "confuzzius"
+          ],
+          "mitigations": [],
+          "parent_vulnerabilities": [],
+          "enabling_vulnerabilities": [
+            "Unchecked External Call",
+            "Low Level Calls"
+          ],
+          "impacting_vulnerabilities": [],
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-c736aa6a-ed15-4ff7-8dfc-1d5a7faa5640"
+        }
+      ]
+    },
+    {
+      "locations": [
+        {
+          "message": {
+            "text": "contract SimpleDAO.sol, function queryCredit"
+          },
+          "physicalLocation": {
+            "artifactLocation": {
+              "uri": "./smartbugs/samples/SimpleDAO.sol"
+            }
+          }
+        }
+      ],
+      "message": {
+        "text": "Exception Disorder"
+      },
+      "ruleId": "sfuzz_Exception_Disorder",
+      "sbo": [
+        {
+          "name": "Mishandled Exception",
+          "description": "Unreported exception or error  in the callee (i.e. call doesn't propagate exceptions) ",
+          "sample_code": "",
+          "level": "Solidity Language",
+          "categories": [
+            "Exceptions"
+          ],
+          "attacks": [
+            "King of the Ether Throne",
+            "DAO",
+            "Integer Over/Under Flow",
+            "GovernMental"
+          ],
+          "references": [
+            {
+              "ref_id": "Atzei 2017",
+              "alias": "Exception Disorders"
+            },
+            {
+              "ref_id": "Kushwaha 2022",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Vidal 2023 - OpenSCV",
+              "alias": "Improper Use of Exception Handling Functions"
+            },
+            {
+              "ref_id": "securify 2.0 2021",
+              "alias": "Unhandled Exception"
+            },
+            {
+              "ref_id": "Rameder 2021",
+              "alias": "Unchecked Low level call / send Return Values"
+            },
+            {
+              "ref_id": "Grishchenko 2018",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Zhou 2022",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Praitheeshan 2019",
+              "alias": "Exception Handling /Mishandled Exceptions"
+            },
+            {
+              "ref_id": "Chen 2020",
+              "alias": "Unchecked Call Return Value"
+            },
+            {
+              "ref_id": "Luu 2016",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Dika 2017",
+              "alias": "Exception Disorders"
+            },
+            {
+              "ref_id": "Zhang 2023",
+              "alias": "Mishandled Exception - ME"
+            },
+            {
+              "ref_id": "Qian 2022",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Chu 2023",
+              "alias": "Unhandled Exception"
+            },
+            {
+              "ref_id": "Chaliasos 2023",
+              "alias": "Unhandled or Mishandled Exceptions"
+            },
+            {
+              "ref_id": "Staderini 2022",
+              "alias": "Exception Disorders"
+            },
+            {
+              "ref_id": "Staderini 2020",
+              "alias": "Exception Disorders"
+            },
+            {
+              "ref_id": "Munir 2023",
+              "alias": "Mishandled / Unhandled Exceptions"
+            },
+            {
+              "ref_id": "Iii William E Bodell 2023",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Perez 2021",
+              "alias": "Unhandled Exception"
+            },
+            {
+              "ref_id": "Huang 2019",
+              "alias": "Mishandled Exception"
+            },
+            {
+              "ref_id": "Li 2017",
+              "alias": "Mishandled Exception / Exception Disorders"
+            },
+            {
+              "ref_id": "Tsankov 2018",
+              "alias": "Unhandled Exception"
+            }
+          ],
+          "cwes": [
+            "CWE-703: Improper Check or Handling of Exceptional Conditions",
+            "CWE-252: Unchecked Return Value"
+          ],
+          "swcs": [],
+          "tools": [
+            "sfuzz",
+            "securify",
+            "confuzzius"
+          ],
+          "mitigations": [],
+          "parent_vulnerabilities": [],
+          "enabling_vulnerabilities": [
+            "Unchecked External Call",
+            "Low Level Calls"
+          ],
+          "impacting_vulnerabilities": [],
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-c736aa6a-ed15-4ff7-8dfc-1d5a7faa5640"
+        }
+      ]
+    }
+  ],
+  "smartcheck": [],
+  "mythril": [
     {
       "locations": [
         {
@@ -2817,7 +2530,7 @@
           },
           "physicalLocation": {
             "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.hex"
+              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
             },
             "region": {
               "startColumn": 289,
@@ -2894,7 +2607,7 @@
           "impacting_vulnerabilities": [
             "Reentrancy"
           ],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-ae0c5775-91fc-40bb-9a58-7ad1b8093c4a"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-bb68a7d2-c7fd-4462-be8e-e6e28eb0c97c"
         }
       ]
     },
@@ -2906,7 +2619,7 @@
           },
           "physicalLocation": {
             "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.hex"
+              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
             },
             "region": {
               "startColumn": 1039,
@@ -3130,7 +2843,8 @@
             "ethor",
             "conkas",
             "confuzzius",
-            "semgrep"
+            "semgrep",
+            "slither"
           ],
           "mitigations": [],
           "parent_vulnerabilities": [
@@ -3138,7 +2852,7 @@
           ],
           "enabling_vulnerabilities": [],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-d9ecaa37-3017-4619-80bf-324afc7d1438"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-b19d6805-3e26-4a93-8237-23fd200ec483"
         }
       ]
     },
@@ -3150,7 +2864,7 @@
           },
           "physicalLocation": {
             "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.hex"
+              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
             },
             "region": {
               "startColumn": 1039,
@@ -3342,7 +3056,7 @@
           "parent_vulnerabilities": [],
           "enabling_vulnerabilities": [],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-2892d467-c358-4d75-b6bb-f12b837fda13"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-996b082e-54ae-4bc1-8a98-f8a24197eac8"
         }
       ]
     },
@@ -3354,7 +3068,7 @@
           },
           "physicalLocation": {
             "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.hex"
+              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
             },
             "region": {
               "startColumn": 1039,
@@ -3482,7 +3196,7 @@
             "Wrong Logic"
           ],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-052e1a82-2f09-4244-bf01-9d22154c988c"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-b520c431-0060-407b-8b77-0db7d1cc12c9"
         }
       ]
     },
@@ -3494,7 +3208,7 @@
           },
           "physicalLocation": {
             "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.hex"
+              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
             },
             "region": {
               "startColumn": 1189,
@@ -3718,7 +3432,8 @@
             "ethor",
             "conkas",
             "confuzzius",
-            "semgrep"
+            "semgrep",
+            "slither"
           ],
           "mitigations": [],
           "parent_vulnerabilities": [
@@ -3726,7 +3441,7 @@
           ],
           "enabling_vulnerabilities": [],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-d9ecaa37-3017-4619-80bf-324afc7d1438"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-b19d6805-3e26-4a93-8237-23fd200ec483"
         }
       ]
     },
@@ -3738,7 +3453,7 @@
           },
           "physicalLocation": {
             "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.hex"
+              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
             },
             "region": {
               "startColumn": 1203,
@@ -3962,7 +3677,8 @@
             "ethor",
             "conkas",
             "confuzzius",
-            "semgrep"
+            "semgrep",
+            "slither"
           ],
           "mitigations": [],
           "parent_vulnerabilities": [
@@ -3970,883 +3686,13 @@
           ],
           "enabling_vulnerabilities": [],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-d9ecaa37-3017-4619-80bf-324afc7d1438"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-b19d6805-3e26-4a93-8237-23fd200ec483"
         }
       ]
     }
   ],
-  "smartcheck": [],
-  "vandal": [
-    {
-      "locations": [
-        {
-          "physicalLocation": {
-            "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
-            },
-            "region": {
-              "startColumn": 1039,
-              "startLine": 1
-            }
-          }
-        }
-      ],
-      "message": {
-        "text": "ReentrantCall"
-      },
-      "ruleId": "vandal_ReentrantCall",
-      "sbo": [
-        {
-          "name": "Reentrancy",
-          "description": "- A single function reentrancy attack occurs when a vulnerable function is the same  function that an attacker is trying to recursively call -an external call within the function triggers the function again, initiating the  half-completed execution multiple times, leading to a cascade of state changes. not reentrant functions which can misbehave if re-entered (called back ) before their termination (using the fallback function) causing i.e. loops  until out-of gas or stack-size reached. It follows from incorrect management of the  global state of an externally invokable function, which manages to re-enter the  caller function in an inconsistent state",
-          "sample_code": "",
-          "level": "Solidity Language",
-          "categories": [
-            "Reentrancy-related"
-          ],
-          "attacks": [
-            "DAO"
-          ],
-          "references": [
-            {
-              "ref_id": "Atzei 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Rameder 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Vidal 2023 - OpenSCV",
-              "alias": "Unsafe Credit Transfer"
-            },
-            {
-              "ref_id": "SWC",
-              "alias": "SWC-107: Reentrancy"
-            },
-            {
-              "ref_id": "Tikhomirov 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Kalra 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Grishchenko 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Zhou 2022",
-              "alias": "Re-entrancy"
-            },
-            {
-              "ref_id": "Praitheeshan 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Di Angelo 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Sayeed 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Durieux 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Luu 2016",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Dika 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Alharby 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Zhang 2023",
-              "alias": "Reentrancy - RE"
-            },
-            {
-              "ref_id": "Qian 2022",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chu 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chaliasos 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Almakhour 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2022",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2022 DefectChecker",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Brent 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Tyurin 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Kaleem 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Staderini 2022",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Amiet 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Arganaraz 2020",
-              "alias": "Re-entrancy"
-            },
-            {
-              "ref_id": "Staderini 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Munir 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Hu 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Iii William E Bodell 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Perez 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Huang 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Li 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Smart Contract Security Field Guide 2023",
-              "alias": "Single-Function Reentrancy"
-            },
-            {
-              "ref_id": "Consensys Diligence 2022",
-              "alias": "Single-Function Reentrancy"
-            },
-            {
-              "ref_id": "DASP Top10 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "securify 2.0 2021",
-              "alias": "DAO"
-            },
-            {
-              "ref_id": "SMARTDEC 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Kadenzipfel 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Sigmaprime SIGP 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Trail of Bits 2023",
-              "alias": "Re-entrancy"
-            }
-          ],
-          "cwes": [
-            "CWE-841: Improper Enforcement of Behavioral Workflow",
-            "CWE-691: Insufficient Control Flow Management"
-          ],
-          "swcs": [
-            "SWC-107: Reentrancy"
-          ],
-          "tools": [
-            "vandal",
-            "sfuzz",
-            "securify",
-            "oyente",
-            "osiris",
-            "mythril",
-            "ethor",
-            "conkas",
-            "confuzzius",
-            "semgrep"
-          ],
-          "mitigations": [],
-          "parent_vulnerabilities": [
-            "A given function is invoked multiple times unexpectedly"
-          ],
-          "enabling_vulnerabilities": [],
-          "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-d9ecaa37-3017-4619-80bf-324afc7d1438"
-        }
-      ]
-    },
-    {
-      "locations": [
-        {
-          "physicalLocation": {
-            "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
-            },
-            "region": {
-              "startColumn": 1039,
-              "startLine": 1
-            }
-          }
-        }
-      ],
-      "message": {
-        "text": "UncheckedCall"
-      },
-      "ruleId": "vandal_UncheckedCall",
-      "sbo": [
-        {
-          "name": "Unchecked External Call",
-          "description": "Unchecked return values of external calls (functions not raising exceptions  i. e. call / callcode / delegatecall/ send should be inside 'if' statements)  ",
-          "sample_code": "",
-          "level": "Solidity Language",
-          "categories": [
-            "Function Calls"
-          ],
-          "attacks": [
-            "GovernMental",
-            "King of the Ether Throne",
-            "EtherPot"
-          ],
-          "references": [
-            {
-              "ref_id": "Rameder 2021",
-              "alias": "Unchecked Low level call / send Return Values"
-            },
-            {
-              "ref_id": "Vidal 2023 - OpenSCV",
-              "alias": "Improper Check of External Call Return Value"
-            },
-            {
-              "ref_id": "securify 2.0 2021",
-              "alias": "Unused Return"
-            },
-            {
-              "ref_id": "Tikhomirov 2018",
-              "alias": "Unchecked External Call"
-            },
-            {
-              "ref_id": "SWC",
-              "alias": "SWC-104: Unchecked Call Return Value"
-            },
-            {
-              "ref_id": "Di Angelo 2019",
-              "alias": "Unchecked Call"
-            },
-            {
-              "ref_id": "Durieux 2020",
-              "alias": "Unchecked Low Level Calls"
-            },
-            {
-              "ref_id": "Chen 2020",
-              "alias": "Unchecked CALL Return Value"
-            },
-            {
-              "ref_id": "Luu 2016",
-              "alias": "Mishandled Exceptions"
-            },
-            {
-              "ref_id": "Alharby 2017",
-              "alias": "Mishandled Exceptions"
-            },
-            {
-              "ref_id": "Qian 2022",
-              "alias": "Mishandled Exceptions"
-            },
-            {
-              "ref_id": "Chu 2023",
-              "alias": "Unhandled Exception"
-            },
-            {
-              "ref_id": "Chaliasos 2023",
-              "alias": "Direct Call To Untrusted Contract"
-            },
-            {
-              "ref_id": "Almakhour 2023",
-              "alias": "Unchecked CALL Return Value"
-            },
-            {
-              "ref_id": "Chen 2022",
-              "alias": "Unchecked External Call"
-            },
-            {
-              "ref_id": "Chen 2022 DefectChecker",
-              "alias": "Unchecked External Call"
-            },
-            {
-              "ref_id": "Chen 2023",
-              "alias": "Unchecked External Call"
-            },
-            {
-              "ref_id": "Dingman 2019",
-              "alias": "Unchecked External Call"
-            },
-            {
-              "ref_id": "Brent 2018",
-              "alias": "Unchecked Send"
-            },
-            {
-              "ref_id": "Tyurin 2019",
-              "alias": "Unchecked Return Values for Low Level Calls"
-            },
-            {
-              "ref_id": "Kaleem 2020",
-              "alias": "Unchecked CALL Return Value"
-            },
-            {
-              "ref_id": "Staderini 2022",
-              "alias": "Unchecked CALL Return Value"
-            },
-            {
-              "ref_id": "Arganaraz 2020",
-              "alias": "Non-Verified External Call"
-            },
-            {
-              "ref_id": "Staderini 2020",
-              "alias": "Unchecked CALL Return Value"
-            },
-            {
-              "ref_id": "Munir 2023",
-              "alias": "Mishandled / Unhandled Exceptions"
-            },
-            {
-              "ref_id": "Hu 2023",
-              "alias": "Unchecked Call"
-            },
-            {
-              "ref_id": "Iii William E Bodell 2023",
-              "alias": "Unchecked Low Level Calls"
-            },
-            {
-              "ref_id": "Perez 2021",
-              "alias": "Unhandled Exception"
-            },
-            {
-              "ref_id": "Li 2017",
-              "alias": "Mishandled Exception / Exception Disorders"
-            },
-            {
-              "ref_id": "Tsankov 2018",
-              "alias": "Unhandled Exception"
-            },
-            {
-              "ref_id": "DASP Top10 2018",
-              "alias": "Unchecked Return Values for Low Level Calls"
-            },
-            {
-              "ref_id": "securify 2.0 2021",
-              "alias": "Unused Return"
-            },
-            {
-              "ref_id": "SMARTDEC 2018",
-              "alias": "Unchecked Low Level Calls"
-            },
-            {
-              "ref_id": "Kadenzipfel 2023",
-              "alias": "Unchecked CALL Return Value"
-            },
-            {
-              "ref_id": "Sigmaprime SIGP 2021",
-              "alias": "Unchecked CALL Return Value"
-            },
-            {
-              "ref_id": "Trail of Bits 2023",
-              "alias": "Unchecked External Call"
-            }
-          ],
-          "cwes": [
-            "CWE-252: Unchecked Return Value",
-            "CWE-703: Improper Check or Handling of Exceptional Conditions"
-          ],
-          "swcs": [
-            "SWC-104: Unchecked Call Return Value"
-          ],
-          "tools": [
-            "vandal",
-            "smartcheck",
-            "slither",
-            "mythril",
-            "ethainter",
-            "conkas"
-          ],
-          "mitigations": [],
-          "parent_vulnerabilities": [],
-          "enabling_vulnerabilities": [],
-          "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-2892d467-c358-4d75-b6bb-f12b837fda13"
-        }
-      ]
-    }
-  ],
+  "ethainter": [],
   "conkas": [
-    {
-      "locations": [
-        {
-          "message": {
-            "text": "contract SimpleDAO, function withdraw(uint256)"
-          },
-          "physicalLocation": {
-            "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.sol"
-            },
-            "region": {
-              "startLine": 19
-            }
-          }
-        }
-      ],
-      "message": {
-        "text": "Unchecked Low Level Call"
-      },
-      "ruleId": "conkas_Unchecked_Low_Level_Call",
-      "sbo": [
-        {
-          "name": "Unchecked External Call",
-          "description": "Unchecked return values of external calls (functions not raising exceptions  i. e. call / callcode / delegatecall/ send should be inside 'if' statements)  ",
-          "sample_code": "",
-          "level": "Solidity Language",
-          "categories": [
-            "Function Calls"
-          ],
-          "attacks": [
-            "GovernMental",
-            "King of the Ether Throne",
-            "EtherPot"
-          ],
-          "references": [
-            {
-              "ref_id": "Rameder 2021",
-              "alias": "Unchecked Low level call / send Return Values"
-            },
-            {
-              "ref_id": "Vidal 2023 - OpenSCV",
-              "alias": "Improper Check of External Call Return Value"
-            },
-            {
-              "ref_id": "securify 2.0 2021",
-              "alias": "Unused Return"
-            },
-            {
-              "ref_id": "Tikhomirov 2018",
-              "alias": "Unchecked External Call"
-            },
-            {
-              "ref_id": "SWC",
-              "alias": "SWC-104: Unchecked Call Return Value"
-            },
-            {
-              "ref_id": "Di Angelo 2019",
-              "alias": "Unchecked Call"
-            },
-            {
-              "ref_id": "Durieux 2020",
-              "alias": "Unchecked Low Level Calls"
-            },
-            {
-              "ref_id": "Chen 2020",
-              "alias": "Unchecked CALL Return Value"
-            },
-            {
-              "ref_id": "Luu 2016",
-              "alias": "Mishandled Exceptions"
-            },
-            {
-              "ref_id": "Alharby 2017",
-              "alias": "Mishandled Exceptions"
-            },
-            {
-              "ref_id": "Qian 2022",
-              "alias": "Mishandled Exceptions"
-            },
-            {
-              "ref_id": "Chu 2023",
-              "alias": "Unhandled Exception"
-            },
-            {
-              "ref_id": "Chaliasos 2023",
-              "alias": "Direct Call To Untrusted Contract"
-            },
-            {
-              "ref_id": "Almakhour 2023",
-              "alias": "Unchecked CALL Return Value"
-            },
-            {
-              "ref_id": "Chen 2022",
-              "alias": "Unchecked External Call"
-            },
-            {
-              "ref_id": "Chen 2022 DefectChecker",
-              "alias": "Unchecked External Call"
-            },
-            {
-              "ref_id": "Chen 2023",
-              "alias": "Unchecked External Call"
-            },
-            {
-              "ref_id": "Dingman 2019",
-              "alias": "Unchecked External Call"
-            },
-            {
-              "ref_id": "Brent 2018",
-              "alias": "Unchecked Send"
-            },
-            {
-              "ref_id": "Tyurin 2019",
-              "alias": "Unchecked Return Values for Low Level Calls"
-            },
-            {
-              "ref_id": "Kaleem 2020",
-              "alias": "Unchecked CALL Return Value"
-            },
-            {
-              "ref_id": "Staderini 2022",
-              "alias": "Unchecked CALL Return Value"
-            },
-            {
-              "ref_id": "Arganaraz 2020",
-              "alias": "Non-Verified External Call"
-            },
-            {
-              "ref_id": "Staderini 2020",
-              "alias": "Unchecked CALL Return Value"
-            },
-            {
-              "ref_id": "Munir 2023",
-              "alias": "Mishandled / Unhandled Exceptions"
-            },
-            {
-              "ref_id": "Hu 2023",
-              "alias": "Unchecked Call"
-            },
-            {
-              "ref_id": "Iii William E Bodell 2023",
-              "alias": "Unchecked Low Level Calls"
-            },
-            {
-              "ref_id": "Perez 2021",
-              "alias": "Unhandled Exception"
-            },
-            {
-              "ref_id": "Li 2017",
-              "alias": "Mishandled Exception / Exception Disorders"
-            },
-            {
-              "ref_id": "Tsankov 2018",
-              "alias": "Unhandled Exception"
-            },
-            {
-              "ref_id": "DASP Top10 2018",
-              "alias": "Unchecked Return Values for Low Level Calls"
-            },
-            {
-              "ref_id": "securify 2.0 2021",
-              "alias": "Unused Return"
-            },
-            {
-              "ref_id": "SMARTDEC 2018",
-              "alias": "Unchecked Low Level Calls"
-            },
-            {
-              "ref_id": "Kadenzipfel 2023",
-              "alias": "Unchecked CALL Return Value"
-            },
-            {
-              "ref_id": "Sigmaprime SIGP 2021",
-              "alias": "Unchecked CALL Return Value"
-            },
-            {
-              "ref_id": "Trail of Bits 2023",
-              "alias": "Unchecked External Call"
-            }
-          ],
-          "cwes": [
-            "CWE-252: Unchecked Return Value",
-            "CWE-703: Improper Check or Handling of Exceptional Conditions"
-          ],
-          "swcs": [
-            "SWC-104: Unchecked Call Return Value"
-          ],
-          "tools": [
-            "vandal",
-            "smartcheck",
-            "slither",
-            "mythril",
-            "ethainter",
-            "conkas"
-          ],
-          "mitigations": [],
-          "parent_vulnerabilities": [],
-          "enabling_vulnerabilities": [],
-          "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-2892d467-c358-4d75-b6bb-f12b837fda13"
-        }
-      ]
-    },
-    {
-      "locations": [
-        {
-          "message": {
-            "text": "contract SimpleDAO, function donate(address)"
-          },
-          "physicalLocation": {
-            "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.sol"
-            },
-            "region": {
-              "startLine": 13
-            }
-          }
-        }
-      ],
-      "message": {
-        "text": "Integer Overflow"
-      },
-      "ruleId": "conkas_Integer_Overflow",
-      "sbo": [
-        {
-          "name": "Integer Overflow / Underflow",
-          "description": "output of a calculation exceeds the lower or upper range of the variable  size type and so cannot be expressed by such type",
-          "sample_code": "",
-          "level": "Solidity Language",
-          "categories": [
-            "Arithmetics-related",
-            "Code Flaws / Errors"
-          ],
-          "attacks": [
-            "POWH Coin 2018",
-            "BEC tokens (Beautychain)",
-            "Batch Transfer Overflow (CVE-2018\u201310299)"
-          ],
-          "references": [
-            {
-              "ref_id": "Kushwaha 2022",
-              "alias": "Integer Overflow / Underflow"
-            },
-            {
-              "ref_id": "Rameder 2021",
-              "alias": "Integer Overflow / Underflow"
-            },
-            {
-              "ref_id": "SWC",
-              "alias": "SWC-101: Integer Overflow and Underflow"
-            },
-            {
-              "ref_id": "Vidal 2023 - OpenSCV",
-              "alias": "Integer Overflow, Integer Underflow"
-            },
-            {
-              "ref_id": "Tikhomirov 2018",
-              "alias": "Unchecked Math"
-            },
-            {
-              "ref_id": "Kalra 2018",
-              "alias": "Integer Overflow / Underflow"
-            },
-            {
-              "ref_id": "Zhou 2022",
-              "alias": "Arithmetic issues"
-            },
-            {
-              "ref_id": "Praitheeshan 2019",
-              "alias": "Integer Overflow / Underflow"
-            },
-            {
-              "ref_id": "Di Angelo 2019",
-              "alias": "Unchecked Math"
-            },
-            {
-              "ref_id": "Sayeed 2020",
-              "alias": "Overflow and Underflow"
-            },
-            {
-              "ref_id": "Durieux 2020",
-              "alias": "Integer Over/Underflow"
-            },
-            {
-              "ref_id": "Chen 2020",
-              "alias": "Integer Overflow and Underflow"
-            },
-            {
-              "ref_id": "Dika 2017",
-              "alias": "Unchecked Math"
-            },
-            {
-              "ref_id": "Zhang 2023",
-              "alias": "Integer Bug - IB"
-            },
-            {
-              "ref_id": "Qian 2022",
-              "alias": "Integer Overflow / Underflow"
-            },
-            {
-              "ref_id": "Chu 2023",
-              "alias": "Integer Overflow / Underflow"
-            },
-            {
-              "ref_id": "Chaliasos 2023",
-              "alias": "Integer Overflow / Underflow"
-            },
-            {
-              "ref_id": "Almakhour 2023",
-              "alias": "Integer Overflow / Underflow"
-            },
-            {
-              "ref_id": "Chen 2022",
-              "alias": "Unmatched Type Assignment"
-            },
-            {
-              "ref_id": "Chen 2022 DefectChecker",
-              "alias": "Unmatched Type Assignment"
-            },
-            {
-              "ref_id": "Chen 2023",
-              "alias": "Integer Overflow"
-            },
-            {
-              "ref_id": "Dingman 2019",
-              "alias": "Overflow / Underflow"
-            },
-            {
-              "ref_id": "Tyurin 2019",
-              "alias": "Overflow and Underflow"
-            },
-            {
-              "ref_id": "Kaleem 2020",
-              "alias": "Integer Overflow and Underflow"
-            },
-            {
-              "ref_id": "Staderini 2022",
-              "alias": "Integer Overflow / Underflow"
-            },
-            {
-              "ref_id": "Amiet 2021",
-              "alias": "Arithmetic issues"
-            },
-            {
-              "ref_id": "Arganaraz 2020",
-              "alias": "Non-Verified Math"
-            },
-            {
-              "ref_id": "Staderini 2020",
-              "alias": "Integer Overflow / Underflow"
-            },
-            {
-              "ref_id": "Munir 2023",
-              "alias": "Integer Over/Underflow"
-            },
-            {
-              "ref_id": "Hu 2023",
-              "alias": "Integer Overflow and Underflow"
-            },
-            {
-              "ref_id": "Sun 2020",
-              "alias": "Integer Overflow"
-            },
-            {
-              "ref_id": "Perez 2021",
-              "alias": "Integer Overflow"
-            },
-            {
-              "ref_id": "Huang 2019",
-              "alias": "Integer Overflow / Underflow"
-            },
-            {
-              "ref_id": "Consensys Diligence 2022",
-              "alias": "Insecure Arithmetic"
-            },
-            {
-              "ref_id": "DASP Top10 2018",
-              "alias": "Arithmetic Issues"
-            },
-            {
-              "ref_id": "SMARTDEC 2018",
-              "alias": "Over / Under Flow"
-            },
-            {
-              "ref_id": "Kadenzipfel 2023",
-              "alias": "Integer Overflow and Underflow"
-            },
-            {
-              "ref_id": "Sigmaprime SIGP 2021",
-              "alias": "Arithmetic Over/Under Flows"
-            },
-            {
-              "ref_id": "Trail of Bits 2023",
-              "alias": "Integer Overflow"
-            }
-          ],
-          "cwes": [
-            "CWE-682: Incorrect Calculation"
-          ],
-          "swcs": [
-            "SWC-101: Integer Overflow and Underflow"
-          ],
-          "tools": [
-            "smartcheck",
-            "sfuzz",
-            "oyente",
-            "osiris",
-            "conkas",
-            "confuzzius",
-            "semgrep"
-          ],
-          "mitigations": [
-            "Use OpenZeppelin's SafeMath"
-          ],
-          "parent_vulnerabilities": [
-            "Arithmetic Issues"
-          ],
-          "enabling_vulnerabilities": [
-            "Integer Division",
-            "Unsafe Type Inference (Variables)"
-          ],
-          "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-5d2347d1-3d35-4122-9d21-02a83a31cc36"
-        }
-      ]
-    },
     {
       "locations": [
         {
@@ -5078,7 +3924,8 @@
             "ethor",
             "conkas",
             "confuzzius",
-            "semgrep"
+            "semgrep",
+            "slither"
           ],
           "mitigations": [],
           "parent_vulnerabilities": [
@@ -5086,26 +3933,889 @@
           ],
           "enabling_vulnerabilities": [],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-d9ecaa37-3017-4619-80bf-324afc7d1438"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-b19d6805-3e26-4a93-8237-23fd200ec483"
         }
       ]
-    }
-  ],
-  "ethainter": [],
-  "osiris": [
+    },
     {
       "locations": [
         {
           "message": {
-            "text": "contract SimpleDAO"
+            "text": "contract SimpleDAO, function donate(address)"
           },
           "physicalLocation": {
             "artifactLocation": {
               "uri": "./smartbugs/samples/SimpleDAO.sol"
             },
             "region": {
-              "startColumn": 18,
+              "startLine": 13
+            }
+          }
+        }
+      ],
+      "message": {
+        "text": "Integer Overflow"
+      },
+      "ruleId": "conkas_Integer_Overflow",
+      "sbo": [
+        {
+          "name": "Integer Overflow / Underflow",
+          "description": "output of a calculation exceeds the lower or upper range of the variable  size type and so cannot be expressed by such type",
+          "sample_code": "",
+          "level": "Solidity Language",
+          "categories": [
+            "Arithmetics-related",
+            "Code Flaws / Errors"
+          ],
+          "attacks": [
+            "POWH Coin 2018",
+            "BEC tokens (Beautychain)",
+            "Batch Transfer Overflow (CVE-2018\u201310299)"
+          ],
+          "references": [
+            {
+              "ref_id": "Kushwaha 2022",
+              "alias": "Integer Overflow / Underflow"
+            },
+            {
+              "ref_id": "Rameder 2021",
+              "alias": "Integer Overflow / Underflow"
+            },
+            {
+              "ref_id": "SWC",
+              "alias": "SWC-101: Integer Overflow and Underflow"
+            },
+            {
+              "ref_id": "Vidal 2023 - OpenSCV",
+              "alias": "Integer Overflow, Integer Underflow"
+            },
+            {
+              "ref_id": "Tikhomirov 2018",
+              "alias": "Unchecked Math"
+            },
+            {
+              "ref_id": "Kalra 2018",
+              "alias": "Integer Overflow / Underflow"
+            },
+            {
+              "ref_id": "Zhou 2022",
+              "alias": "Arithmetic issues"
+            },
+            {
+              "ref_id": "Praitheeshan 2019",
+              "alias": "Integer Overflow / Underflow"
+            },
+            {
+              "ref_id": "Di Angelo 2019",
+              "alias": "Unchecked Math"
+            },
+            {
+              "ref_id": "Sayeed 2020",
+              "alias": "Overflow and Underflow"
+            },
+            {
+              "ref_id": "Durieux 2020",
+              "alias": "Integer Over/Underflow"
+            },
+            {
+              "ref_id": "Chen 2020",
+              "alias": "Integer Overflow and Underflow"
+            },
+            {
+              "ref_id": "Dika 2017",
+              "alias": "Unchecked Math"
+            },
+            {
+              "ref_id": "Zhang 2023",
+              "alias": "Integer Bug - IB"
+            },
+            {
+              "ref_id": "Qian 2022",
+              "alias": "Integer Overflow / Underflow"
+            },
+            {
+              "ref_id": "Chu 2023",
+              "alias": "Integer Overflow / Underflow"
+            },
+            {
+              "ref_id": "Chaliasos 2023",
+              "alias": "Integer Overflow / Underflow"
+            },
+            {
+              "ref_id": "Almakhour 2023",
+              "alias": "Integer Overflow / Underflow"
+            },
+            {
+              "ref_id": "Chen 2022",
+              "alias": "Unmatched Type Assignment"
+            },
+            {
+              "ref_id": "Chen 2022 DefectChecker",
+              "alias": "Unmatched Type Assignment"
+            },
+            {
+              "ref_id": "Chen 2023",
+              "alias": "Integer Overflow"
+            },
+            {
+              "ref_id": "Dingman 2019",
+              "alias": "Overflow / Underflow"
+            },
+            {
+              "ref_id": "Tyurin 2019",
+              "alias": "Overflow and Underflow"
+            },
+            {
+              "ref_id": "Kaleem 2020",
+              "alias": "Integer Overflow and Underflow"
+            },
+            {
+              "ref_id": "Staderini 2022",
+              "alias": "Integer Overflow / Underflow"
+            },
+            {
+              "ref_id": "Amiet 2021",
+              "alias": "Arithmetic issues"
+            },
+            {
+              "ref_id": "Arganaraz 2020",
+              "alias": "Non-Verified Math"
+            },
+            {
+              "ref_id": "Staderini 2020",
+              "alias": "Integer Overflow / Underflow"
+            },
+            {
+              "ref_id": "Munir 2023",
+              "alias": "Integer Over/Underflow"
+            },
+            {
+              "ref_id": "Hu 2023",
+              "alias": "Integer Overflow and Underflow"
+            },
+            {
+              "ref_id": "Sun 2020",
+              "alias": "Integer Overflow"
+            },
+            {
+              "ref_id": "Perez 2021",
+              "alias": "Integer Overflow"
+            },
+            {
+              "ref_id": "Huang 2019",
+              "alias": "Integer Overflow / Underflow"
+            },
+            {
+              "ref_id": "Consensys Diligence 2022",
+              "alias": "Insecure Arithmetic"
+            },
+            {
+              "ref_id": "DASP Top10 2018",
+              "alias": "Arithmetic Issues"
+            },
+            {
+              "ref_id": "SMARTDEC 2018",
+              "alias": "Over / Under Flow"
+            },
+            {
+              "ref_id": "Kadenzipfel 2023",
+              "alias": "Integer Overflow and Underflow"
+            },
+            {
+              "ref_id": "Sigmaprime SIGP 2021",
+              "alias": "Arithmetic Over/Under Flows"
+            },
+            {
+              "ref_id": "Trail of Bits 2023",
+              "alias": "Integer Overflow"
+            }
+          ],
+          "cwes": [
+            "CWE-682: Incorrect Calculation"
+          ],
+          "swcs": [
+            "SWC-101: Integer Overflow and Underflow"
+          ],
+          "tools": [
+            "smartcheck",
+            "sfuzz",
+            "oyente",
+            "osiris",
+            "conkas",
+            "confuzzius",
+            "semgrep"
+          ],
+          "mitigations": [
+            "Use OpenZeppelin's SafeMath"
+          ],
+          "parent_vulnerabilities": [
+            "Arithmetic Issues"
+          ],
+          "enabling_vulnerabilities": [
+            "Integer Division",
+            "Unsafe Type Inference (Variables)"
+          ],
+          "impacting_vulnerabilities": [],
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-655d7650-b3e3-4eaf-896d-16418d7026ec"
+        }
+      ]
+    },
+    {
+      "locations": [
+        {
+          "message": {
+            "text": "contract SimpleDAO, function withdraw(uint256)"
+          },
+          "physicalLocation": {
+            "artifactLocation": {
+              "uri": "./smartbugs/samples/SimpleDAO.sol"
+            },
+            "region": {
               "startLine": 19
+            }
+          }
+        }
+      ],
+      "message": {
+        "text": "Unchecked Low Level Call"
+      },
+      "ruleId": "conkas_Unchecked_Low_Level_Call",
+      "sbo": [
+        {
+          "name": "Unchecked External Call",
+          "description": "Unchecked return values of external calls (functions not raising exceptions  i. e. call / callcode / delegatecall/ send should be inside 'if' statements)  ",
+          "sample_code": "",
+          "level": "Solidity Language",
+          "categories": [
+            "Function Calls"
+          ],
+          "attacks": [
+            "GovernMental",
+            "King of the Ether Throne",
+            "EtherPot"
+          ],
+          "references": [
+            {
+              "ref_id": "Rameder 2021",
+              "alias": "Unchecked Low level call / send Return Values"
+            },
+            {
+              "ref_id": "Vidal 2023 - OpenSCV",
+              "alias": "Improper Check of External Call Return Value"
+            },
+            {
+              "ref_id": "securify 2.0 2021",
+              "alias": "Unused Return"
+            },
+            {
+              "ref_id": "Tikhomirov 2018",
+              "alias": "Unchecked External Call"
+            },
+            {
+              "ref_id": "SWC",
+              "alias": "SWC-104: Unchecked Call Return Value"
+            },
+            {
+              "ref_id": "Di Angelo 2019",
+              "alias": "Unchecked Call"
+            },
+            {
+              "ref_id": "Durieux 2020",
+              "alias": "Unchecked Low Level Calls"
+            },
+            {
+              "ref_id": "Chen 2020",
+              "alias": "Unchecked CALL Return Value"
+            },
+            {
+              "ref_id": "Luu 2016",
+              "alias": "Mishandled Exceptions"
+            },
+            {
+              "ref_id": "Alharby 2017",
+              "alias": "Mishandled Exceptions"
+            },
+            {
+              "ref_id": "Qian 2022",
+              "alias": "Mishandled Exceptions"
+            },
+            {
+              "ref_id": "Chu 2023",
+              "alias": "Unhandled Exception"
+            },
+            {
+              "ref_id": "Chaliasos 2023",
+              "alias": "Direct Call To Untrusted Contract"
+            },
+            {
+              "ref_id": "Almakhour 2023",
+              "alias": "Unchecked CALL Return Value"
+            },
+            {
+              "ref_id": "Chen 2022",
+              "alias": "Unchecked External Call"
+            },
+            {
+              "ref_id": "Chen 2022 DefectChecker",
+              "alias": "Unchecked External Call"
+            },
+            {
+              "ref_id": "Chen 2023",
+              "alias": "Unchecked External Call"
+            },
+            {
+              "ref_id": "Dingman 2019",
+              "alias": "Unchecked External Call"
+            },
+            {
+              "ref_id": "Brent 2018",
+              "alias": "Unchecked Send"
+            },
+            {
+              "ref_id": "Tyurin 2019",
+              "alias": "Unchecked Return Values for Low Level Calls"
+            },
+            {
+              "ref_id": "Kaleem 2020",
+              "alias": "Unchecked CALL Return Value"
+            },
+            {
+              "ref_id": "Staderini 2022",
+              "alias": "Unchecked CALL Return Value"
+            },
+            {
+              "ref_id": "Arganaraz 2020",
+              "alias": "Non-Verified External Call"
+            },
+            {
+              "ref_id": "Staderini 2020",
+              "alias": "Unchecked CALL Return Value"
+            },
+            {
+              "ref_id": "Munir 2023",
+              "alias": "Mishandled / Unhandled Exceptions"
+            },
+            {
+              "ref_id": "Hu 2023",
+              "alias": "Unchecked Call"
+            },
+            {
+              "ref_id": "Iii William E Bodell 2023",
+              "alias": "Unchecked Low Level Calls"
+            },
+            {
+              "ref_id": "Perez 2021",
+              "alias": "Unhandled Exception"
+            },
+            {
+              "ref_id": "Li 2017",
+              "alias": "Mishandled Exception / Exception Disorders"
+            },
+            {
+              "ref_id": "Tsankov 2018",
+              "alias": "Unhandled Exception"
+            },
+            {
+              "ref_id": "DASP Top10 2018",
+              "alias": "Unchecked Return Values for Low Level Calls"
+            },
+            {
+              "ref_id": "securify 2.0 2021",
+              "alias": "Unused Return"
+            },
+            {
+              "ref_id": "SMARTDEC 2018",
+              "alias": "Unchecked Low Level Calls"
+            },
+            {
+              "ref_id": "Kadenzipfel 2023",
+              "alias": "Unchecked CALL Return Value"
+            },
+            {
+              "ref_id": "Sigmaprime SIGP 2021",
+              "alias": "Unchecked CALL Return Value"
+            },
+            {
+              "ref_id": "Trail of Bits 2023",
+              "alias": "Unchecked External Call"
+            }
+          ],
+          "cwes": [
+            "CWE-252: Unchecked Return Value",
+            "CWE-703: Improper Check or Handling of Exceptional Conditions"
+          ],
+          "swcs": [
+            "SWC-104: Unchecked Call Return Value"
+          ],
+          "tools": [
+            "vandal",
+            "smartcheck",
+            "slither",
+            "mythril",
+            "ethainter",
+            "conkas"
+          ],
+          "mitigations": [],
+          "parent_vulnerabilities": [],
+          "enabling_vulnerabilities": [],
+          "impacting_vulnerabilities": [],
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-996b082e-54ae-4bc1-8a98-f8a24197eac8"
+        }
+      ]
+    }
+  ],
+  "vandal": [
+    {
+      "locations": [
+        {
+          "physicalLocation": {
+            "artifactLocation": {
+              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
+            },
+            "region": {
+              "startColumn": 1039,
+              "startLine": 1
+            }
+          }
+        }
+      ],
+      "message": {
+        "text": "ReentrantCall"
+      },
+      "ruleId": "vandal_ReentrantCall",
+      "sbo": [
+        {
+          "name": "Reentrancy",
+          "description": "- A single function reentrancy attack occurs when a vulnerable function is the same  function that an attacker is trying to recursively call -an external call within the function triggers the function again, initiating the  half-completed execution multiple times, leading to a cascade of state changes. not reentrant functions which can misbehave if re-entered (called back ) before their termination (using the fallback function) causing i.e. loops  until out-of gas or stack-size reached. It follows from incorrect management of the  global state of an externally invokable function, which manages to re-enter the  caller function in an inconsistent state",
+          "sample_code": "",
+          "level": "Solidity Language",
+          "categories": [
+            "Reentrancy-related"
+          ],
+          "attacks": [
+            "DAO"
+          ],
+          "references": [
+            {
+              "ref_id": "Atzei 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Rameder 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Vidal 2023 - OpenSCV",
+              "alias": "Unsafe Credit Transfer"
+            },
+            {
+              "ref_id": "SWC",
+              "alias": "SWC-107: Reentrancy"
+            },
+            {
+              "ref_id": "Tikhomirov 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Kalra 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Grishchenko 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Zhou 2022",
+              "alias": "Re-entrancy"
+            },
+            {
+              "ref_id": "Praitheeshan 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Di Angelo 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Sayeed 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Durieux 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Luu 2016",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Dika 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Alharby 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Zhang 2023",
+              "alias": "Reentrancy - RE"
+            },
+            {
+              "ref_id": "Qian 2022",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chu 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chaliasos 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Almakhour 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2022",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2022 DefectChecker",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Brent 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Tyurin 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Kaleem 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Staderini 2022",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Amiet 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Arganaraz 2020",
+              "alias": "Re-entrancy"
+            },
+            {
+              "ref_id": "Staderini 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Munir 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Hu 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Iii William E Bodell 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Perez 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Huang 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Li 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Smart Contract Security Field Guide 2023",
+              "alias": "Single-Function Reentrancy"
+            },
+            {
+              "ref_id": "Consensys Diligence 2022",
+              "alias": "Single-Function Reentrancy"
+            },
+            {
+              "ref_id": "DASP Top10 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "securify 2.0 2021",
+              "alias": "DAO"
+            },
+            {
+              "ref_id": "SMARTDEC 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Kadenzipfel 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Sigmaprime SIGP 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Trail of Bits 2023",
+              "alias": "Re-entrancy"
+            }
+          ],
+          "cwes": [
+            "CWE-841: Improper Enforcement of Behavioral Workflow",
+            "CWE-691: Insufficient Control Flow Management"
+          ],
+          "swcs": [
+            "SWC-107: Reentrancy"
+          ],
+          "tools": [
+            "vandal",
+            "sfuzz",
+            "securify",
+            "oyente",
+            "osiris",
+            "mythril",
+            "ethor",
+            "conkas",
+            "confuzzius",
+            "semgrep",
+            "slither"
+          ],
+          "mitigations": [],
+          "parent_vulnerabilities": [
+            "A given function is invoked multiple times unexpectedly"
+          ],
+          "enabling_vulnerabilities": [],
+          "impacting_vulnerabilities": [],
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-b19d6805-3e26-4a93-8237-23fd200ec483"
+        }
+      ]
+    },
+    {
+      "locations": [
+        {
+          "physicalLocation": {
+            "artifactLocation": {
+              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
+            },
+            "region": {
+              "startColumn": 1039,
+              "startLine": 1
+            }
+          }
+        }
+      ],
+      "message": {
+        "text": "UncheckedCall"
+      },
+      "ruleId": "vandal_UncheckedCall",
+      "sbo": [
+        {
+          "name": "Unchecked External Call",
+          "description": "Unchecked return values of external calls (functions not raising exceptions  i. e. call / callcode / delegatecall/ send should be inside 'if' statements)  ",
+          "sample_code": "",
+          "level": "Solidity Language",
+          "categories": [
+            "Function Calls"
+          ],
+          "attacks": [
+            "GovernMental",
+            "King of the Ether Throne",
+            "EtherPot"
+          ],
+          "references": [
+            {
+              "ref_id": "Rameder 2021",
+              "alias": "Unchecked Low level call / send Return Values"
+            },
+            {
+              "ref_id": "Vidal 2023 - OpenSCV",
+              "alias": "Improper Check of External Call Return Value"
+            },
+            {
+              "ref_id": "securify 2.0 2021",
+              "alias": "Unused Return"
+            },
+            {
+              "ref_id": "Tikhomirov 2018",
+              "alias": "Unchecked External Call"
+            },
+            {
+              "ref_id": "SWC",
+              "alias": "SWC-104: Unchecked Call Return Value"
+            },
+            {
+              "ref_id": "Di Angelo 2019",
+              "alias": "Unchecked Call"
+            },
+            {
+              "ref_id": "Durieux 2020",
+              "alias": "Unchecked Low Level Calls"
+            },
+            {
+              "ref_id": "Chen 2020",
+              "alias": "Unchecked CALL Return Value"
+            },
+            {
+              "ref_id": "Luu 2016",
+              "alias": "Mishandled Exceptions"
+            },
+            {
+              "ref_id": "Alharby 2017",
+              "alias": "Mishandled Exceptions"
+            },
+            {
+              "ref_id": "Qian 2022",
+              "alias": "Mishandled Exceptions"
+            },
+            {
+              "ref_id": "Chu 2023",
+              "alias": "Unhandled Exception"
+            },
+            {
+              "ref_id": "Chaliasos 2023",
+              "alias": "Direct Call To Untrusted Contract"
+            },
+            {
+              "ref_id": "Almakhour 2023",
+              "alias": "Unchecked CALL Return Value"
+            },
+            {
+              "ref_id": "Chen 2022",
+              "alias": "Unchecked External Call"
+            },
+            {
+              "ref_id": "Chen 2022 DefectChecker",
+              "alias": "Unchecked External Call"
+            },
+            {
+              "ref_id": "Chen 2023",
+              "alias": "Unchecked External Call"
+            },
+            {
+              "ref_id": "Dingman 2019",
+              "alias": "Unchecked External Call"
+            },
+            {
+              "ref_id": "Brent 2018",
+              "alias": "Unchecked Send"
+            },
+            {
+              "ref_id": "Tyurin 2019",
+              "alias": "Unchecked Return Values for Low Level Calls"
+            },
+            {
+              "ref_id": "Kaleem 2020",
+              "alias": "Unchecked CALL Return Value"
+            },
+            {
+              "ref_id": "Staderini 2022",
+              "alias": "Unchecked CALL Return Value"
+            },
+            {
+              "ref_id": "Arganaraz 2020",
+              "alias": "Non-Verified External Call"
+            },
+            {
+              "ref_id": "Staderini 2020",
+              "alias": "Unchecked CALL Return Value"
+            },
+            {
+              "ref_id": "Munir 2023",
+              "alias": "Mishandled / Unhandled Exceptions"
+            },
+            {
+              "ref_id": "Hu 2023",
+              "alias": "Unchecked Call"
+            },
+            {
+              "ref_id": "Iii William E Bodell 2023",
+              "alias": "Unchecked Low Level Calls"
+            },
+            {
+              "ref_id": "Perez 2021",
+              "alias": "Unhandled Exception"
+            },
+            {
+              "ref_id": "Li 2017",
+              "alias": "Mishandled Exception / Exception Disorders"
+            },
+            {
+              "ref_id": "Tsankov 2018",
+              "alias": "Unhandled Exception"
+            },
+            {
+              "ref_id": "DASP Top10 2018",
+              "alias": "Unchecked Return Values for Low Level Calls"
+            },
+            {
+              "ref_id": "securify 2.0 2021",
+              "alias": "Unused Return"
+            },
+            {
+              "ref_id": "SMARTDEC 2018",
+              "alias": "Unchecked Low Level Calls"
+            },
+            {
+              "ref_id": "Kadenzipfel 2023",
+              "alias": "Unchecked CALL Return Value"
+            },
+            {
+              "ref_id": "Sigmaprime SIGP 2021",
+              "alias": "Unchecked CALL Return Value"
+            },
+            {
+              "ref_id": "Trail of Bits 2023",
+              "alias": "Unchecked External Call"
+            }
+          ],
+          "cwes": [
+            "CWE-252: Unchecked Return Value",
+            "CWE-703: Improper Check or Handling of Exceptional Conditions"
+          ],
+          "swcs": [
+            "SWC-104: Unchecked Call Return Value"
+          ],
+          "tools": [
+            "vandal",
+            "smartcheck",
+            "slither",
+            "mythril",
+            "ethainter",
+            "conkas"
+          ],
+          "mitigations": [],
+          "parent_vulnerabilities": [],
+          "enabling_vulnerabilities": [],
+          "impacting_vulnerabilities": [],
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-996b082e-54ae-4bc1-8a98-f8a24197eac8"
+        }
+      ]
+    }
+  ],
+  "osiris": [
+    {
+      "locations": [
+        {
+          "physicalLocation": {
+            "artifactLocation": {
+              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
             }
           }
         }
@@ -5193,23 +4903,16 @@
           ],
           "enabling_vulnerabilities": [],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-dcb1849c-84ef-462e-b1fc-c16fc2f9cc7b"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-91f06cc5-acb9-40d3-bb4f-ff55f0e6fe72"
         }
       ]
     },
     {
       "locations": [
         {
-          "message": {
-            "text": "contract SimpleDAO"
-          },
           "physicalLocation": {
             "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.sol"
-            },
-            "region": {
-              "startColumn": 5,
-              "startLine": 13
+              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
             }
           }
         }
@@ -5417,23 +5120,16 @@
             "Unsafe Type Inference (Variables)"
           ],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-5d2347d1-3d35-4122-9d21-02a83a31cc36"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-655d7650-b3e3-4eaf-896d-16418d7026ec"
         }
       ]
     },
     {
       "locations": [
         {
-          "message": {
-            "text": "contract SimpleDAO"
-          },
           "physicalLocation": {
             "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.sol"
-            },
-            "region": {
-              "startColumn": 18,
-              "startLine": 19
+              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
             }
           }
         }
@@ -5653,7 +5349,8 @@
             "ethor",
             "conkas",
             "confuzzius",
-            "semgrep"
+            "semgrep",
+            "slither"
           ],
           "mitigations": [],
           "parent_vulnerabilities": [
@@ -5661,23 +5358,16 @@
           ],
           "enabling_vulnerabilities": [],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-d9ecaa37-3017-4619-80bf-324afc7d1438"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-b19d6805-3e26-4a93-8237-23fd200ec483"
         }
       ]
     },
     {
       "locations": [
         {
-          "message": {
-            "text": "contract SimpleDAO"
-          },
           "physicalLocation": {
             "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.sol"
-            },
-            "region": {
-              "startColumn": 7,
-              "startLine": 20
+              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
             }
           }
         }
@@ -5885,343 +5575,7 @@
             "Unsafe Type Inference (Variables)"
           ],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-5d2347d1-3d35-4122-9d21-02a83a31cc36"
-        }
-      ]
-    }
-  ],
-  "oyente": [
-    {
-      "locations": [
-        {
-          "physicalLocation": {
-            "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
-            }
-          }
-        }
-      ],
-      "message": {
-        "text": "Callstack Depth Attack Vulnerability"
-      },
-      "ruleId": "oyente_Callstack_Depth_Attack_Vulnerability",
-      "sbo": [
-        {
-          "name": "CallStack Depth Limit",
-          "description": "Exception after the call stack depth of 1024 frames is exceeded (not handled by victim contract, or return value not checked)",
-          "sample_code": "",
-          "level": "EVM",
-          "categories": [
-            "Exceptions"
-          ],
-          "attacks": [
-            "GovernMental",
-            "King of the Ether Throne"
-          ],
-          "references": [
-            {
-              "ref_id": "Atzei 2017",
-              "alias": "Stack Size Limit"
-            },
-            {
-              "ref_id": "Rameder 2021",
-              "alias": "CallStack Depth Limit"
-            },
-            {
-              "ref_id": "Vidal 2023 - OpenSCV",
-              "alias": "Stack-based Buffer Overflow"
-            },
-            {
-              "ref_id": "Praitheeshan 2019",
-              "alias": "Call Stack Depth Limitation"
-            },
-            {
-              "ref_id": "Di Angelo 2019",
-              "alias": "CallStack Depth"
-            },
-            {
-              "ref_id": "Chen 2020",
-              "alias": "CallStack Depth Limit"
-            },
-            {
-              "ref_id": "Luu 2016",
-              "alias": "Mishandled Exceptions"
-            },
-            {
-              "ref_id": "Qian 2022",
-              "alias": "Mishandled Exceptions"
-            },
-            {
-              "ref_id": "Dingman 2019",
-              "alias": "Stack Size Limit"
-            },
-            {
-              "ref_id": "Tyurin 2019",
-              "alias": "Callstack Bound"
-            },
-            {
-              "ref_id": "Munir 2023",
-              "alias": "Callstack Depth Issue"
-            },
-            {
-              "ref_id": "Li 2017",
-              "alias": "Stack Overflow"
-            },
-            {
-              "ref_id": "Consensys Diligence 2022",
-              "alias": "Call Depth Attack"
-            }
-          ],
-          "cwes": [],
-          "swcs": [],
-          "tools": [
-            "oyente",
-            "osiris"
-          ],
-          "mitigations": [],
-          "parent_vulnerabilities": [
-            "Mishandled Exception"
-          ],
-          "enabling_vulnerabilities": [],
-          "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-dcb1849c-84ef-462e-b1fc-c16fc2f9cc7b"
-        }
-      ]
-    },
-    {
-      "locations": [
-        {
-          "physicalLocation": {
-            "artifactLocation": {
-              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
-            }
-          }
-        }
-      ],
-      "message": {
-        "text": "Re-Entrancy Vulnerability"
-      },
-      "ruleId": "oyente_Re_Entrancy_Vulnerability",
-      "sbo": [
-        {
-          "name": "Reentrancy",
-          "description": "- A single function reentrancy attack occurs when a vulnerable function is the same  function that an attacker is trying to recursively call -an external call within the function triggers the function again, initiating the  half-completed execution multiple times, leading to a cascade of state changes. not reentrant functions which can misbehave if re-entered (called back ) before their termination (using the fallback function) causing i.e. loops  until out-of gas or stack-size reached. It follows from incorrect management of the  global state of an externally invokable function, which manages to re-enter the  caller function in an inconsistent state",
-          "sample_code": "",
-          "level": "Solidity Language",
-          "categories": [
-            "Reentrancy-related"
-          ],
-          "attacks": [
-            "DAO"
-          ],
-          "references": [
-            {
-              "ref_id": "Atzei 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Rameder 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Vidal 2023 - OpenSCV",
-              "alias": "Unsafe Credit Transfer"
-            },
-            {
-              "ref_id": "SWC",
-              "alias": "SWC-107: Reentrancy"
-            },
-            {
-              "ref_id": "Tikhomirov 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Kalra 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Grishchenko 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Zhou 2022",
-              "alias": "Re-entrancy"
-            },
-            {
-              "ref_id": "Praitheeshan 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Di Angelo 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Sayeed 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Durieux 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Luu 2016",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Dika 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Alharby 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Zhang 2023",
-              "alias": "Reentrancy - RE"
-            },
-            {
-              "ref_id": "Qian 2022",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chu 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chaliasos 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Almakhour 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2022",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2022 DefectChecker",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Chen 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Brent 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Tyurin 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Kaleem 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Staderini 2022",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Amiet 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Arganaraz 2020",
-              "alias": "Re-entrancy"
-            },
-            {
-              "ref_id": "Staderini 2020",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Munir 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Hu 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Iii William E Bodell 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Perez 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Huang 2019",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Li 2017",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Smart Contract Security Field Guide 2023",
-              "alias": "Single-Function Reentrancy"
-            },
-            {
-              "ref_id": "Consensys Diligence 2022",
-              "alias": "Single-Function Reentrancy"
-            },
-            {
-              "ref_id": "DASP Top10 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "securify 2.0 2021",
-              "alias": "DAO"
-            },
-            {
-              "ref_id": "SMARTDEC 2018",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Kadenzipfel 2023",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Sigmaprime SIGP 2021",
-              "alias": "Reentrancy"
-            },
-            {
-              "ref_id": "Trail of Bits 2023",
-              "alias": "Re-entrancy"
-            }
-          ],
-          "cwes": [
-            "CWE-841: Improper Enforcement of Behavioral Workflow",
-            "CWE-691: Insufficient Control Flow Management"
-          ],
-          "swcs": [
-            "SWC-107: Reentrancy"
-          ],
-          "tools": [
-            "vandal",
-            "sfuzz",
-            "securify",
-            "oyente",
-            "osiris",
-            "mythril",
-            "ethor",
-            "conkas",
-            "confuzzius",
-            "semgrep"
-          ],
-          "mitigations": [],
-          "parent_vulnerabilities": [
-            "A given function is invoked multiple times unexpectedly"
-          ],
-          "enabling_vulnerabilities": [],
-          "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-d9ecaa37-3017-4619-80bf-324afc7d1438"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-655d7650-b3e3-4eaf-896d-16418d7026ec"
         }
       ]
     }
@@ -6452,7 +5806,8 @@
             "ethor",
             "conkas",
             "confuzzius",
-            "semgrep"
+            "semgrep",
+            "slither"
           ],
           "mitigations": [],
           "parent_vulnerabilities": [
@@ -6460,7 +5815,344 @@
           ],
           "enabling_vulnerabilities": [],
           "impacting_vulnerabilities": [],
-          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-d9ecaa37-3017-4619-80bf-324afc7d1438"
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-b19d6805-3e26-4a93-8237-23fd200ec483"
+        }
+      ]
+    }
+  ],
+  "oyente": [
+    {
+      "locations": [
+        {
+          "physicalLocation": {
+            "artifactLocation": {
+              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
+            }
+          }
+        }
+      ],
+      "message": {
+        "text": "Callstack Depth Attack Vulnerability"
+      },
+      "ruleId": "oyente_Callstack_Depth_Attack_Vulnerability",
+      "sbo": [
+        {
+          "name": "CallStack Depth Limit",
+          "description": "Exception after the call stack depth of 1024 frames is exceeded (not handled by victim contract, or return value not checked)",
+          "sample_code": "",
+          "level": "EVM",
+          "categories": [
+            "Exceptions"
+          ],
+          "attacks": [
+            "GovernMental",
+            "King of the Ether Throne"
+          ],
+          "references": [
+            {
+              "ref_id": "Atzei 2017",
+              "alias": "Stack Size Limit"
+            },
+            {
+              "ref_id": "Rameder 2021",
+              "alias": "CallStack Depth Limit"
+            },
+            {
+              "ref_id": "Vidal 2023 - OpenSCV",
+              "alias": "Stack-based Buffer Overflow"
+            },
+            {
+              "ref_id": "Praitheeshan 2019",
+              "alias": "Call Stack Depth Limitation"
+            },
+            {
+              "ref_id": "Di Angelo 2019",
+              "alias": "CallStack Depth"
+            },
+            {
+              "ref_id": "Chen 2020",
+              "alias": "CallStack Depth Limit"
+            },
+            {
+              "ref_id": "Luu 2016",
+              "alias": "Mishandled Exceptions"
+            },
+            {
+              "ref_id": "Qian 2022",
+              "alias": "Mishandled Exceptions"
+            },
+            {
+              "ref_id": "Dingman 2019",
+              "alias": "Stack Size Limit"
+            },
+            {
+              "ref_id": "Tyurin 2019",
+              "alias": "Callstack Bound"
+            },
+            {
+              "ref_id": "Munir 2023",
+              "alias": "Callstack Depth Issue"
+            },
+            {
+              "ref_id": "Li 2017",
+              "alias": "Stack Overflow"
+            },
+            {
+              "ref_id": "Consensys Diligence 2022",
+              "alias": "Call Depth Attack"
+            }
+          ],
+          "cwes": [],
+          "swcs": [],
+          "tools": [
+            "oyente",
+            "osiris"
+          ],
+          "mitigations": [],
+          "parent_vulnerabilities": [
+            "Mishandled Exception"
+          ],
+          "enabling_vulnerabilities": [],
+          "impacting_vulnerabilities": [],
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-91f06cc5-acb9-40d3-bb4f-ff55f0e6fe72"
+        }
+      ]
+    },
+    {
+      "locations": [
+        {
+          "physicalLocation": {
+            "artifactLocation": {
+              "uri": "./smartbugs/samples/SimpleDAO.rt.hex"
+            }
+          }
+        }
+      ],
+      "message": {
+        "text": "Re-Entrancy Vulnerability"
+      },
+      "ruleId": "oyente_Re_Entrancy_Vulnerability",
+      "sbo": [
+        {
+          "name": "Reentrancy",
+          "description": "- A single function reentrancy attack occurs when a vulnerable function is the same  function that an attacker is trying to recursively call -an external call within the function triggers the function again, initiating the  half-completed execution multiple times, leading to a cascade of state changes. not reentrant functions which can misbehave if re-entered (called back ) before their termination (using the fallback function) causing i.e. loops  until out-of gas or stack-size reached. It follows from incorrect management of the  global state of an externally invokable function, which manages to re-enter the  caller function in an inconsistent state",
+          "sample_code": "",
+          "level": "Solidity Language",
+          "categories": [
+            "Reentrancy-related"
+          ],
+          "attacks": [
+            "DAO"
+          ],
+          "references": [
+            {
+              "ref_id": "Atzei 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Rameder 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Vidal 2023 - OpenSCV",
+              "alias": "Unsafe Credit Transfer"
+            },
+            {
+              "ref_id": "SWC",
+              "alias": "SWC-107: Reentrancy"
+            },
+            {
+              "ref_id": "Tikhomirov 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Kalra 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Grishchenko 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Zhou 2022",
+              "alias": "Re-entrancy"
+            },
+            {
+              "ref_id": "Praitheeshan 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Di Angelo 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Sayeed 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Durieux 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Luu 2016",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Dika 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Alharby 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Zhang 2023",
+              "alias": "Reentrancy - RE"
+            },
+            {
+              "ref_id": "Qian 2022",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chu 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chaliasos 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Almakhour 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2022",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2022 DefectChecker",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Chen 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Brent 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Tyurin 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Kaleem 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Staderini 2022",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Amiet 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Arganaraz 2020",
+              "alias": "Re-entrancy"
+            },
+            {
+              "ref_id": "Staderini 2020",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Munir 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Hu 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Iii William E Bodell 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Perez 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Huang 2019",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Li 2017",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Smart Contract Security Field Guide 2023",
+              "alias": "Single-Function Reentrancy"
+            },
+            {
+              "ref_id": "Consensys Diligence 2022",
+              "alias": "Single-Function Reentrancy"
+            },
+            {
+              "ref_id": "DASP Top10 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "securify 2.0 2021",
+              "alias": "DAO"
+            },
+            {
+              "ref_id": "SMARTDEC 2018",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Kadenzipfel 2023",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Sigmaprime SIGP 2021",
+              "alias": "Reentrancy"
+            },
+            {
+              "ref_id": "Trail of Bits 2023",
+              "alias": "Re-entrancy"
+            }
+          ],
+          "cwes": [
+            "CWE-841: Improper Enforcement of Behavioral Workflow",
+            "CWE-691: Insufficient Control Flow Management"
+          ],
+          "swcs": [
+            "SWC-107: Reentrancy"
+          ],
+          "tools": [
+            "vandal",
+            "sfuzz",
+            "securify",
+            "oyente",
+            "osiris",
+            "mythril",
+            "ethor",
+            "conkas",
+            "confuzzius",
+            "semgrep",
+            "slither"
+          ],
+          "mitigations": [],
+          "parent_vulnerabilities": [
+            "A given function is invoked multiple times unexpectedly"
+          ],
+          "enabling_vulnerabilities": [],
+          "impacting_vulnerabilities": [],
+          "url": "https://smart-contracts-vulns-data-model.github.io/smart-vulnerabilities/main?vulnerability=vul-b19d6805-3e26-4a93-8237-23fd200ec483"
         }
       ]
     }
